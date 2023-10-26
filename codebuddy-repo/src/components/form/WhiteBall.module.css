@@ -1,0 +1,12 @@
+.whiteBall {
+    width: 120px; /* Ajuste o tamanho conforme desejado */
+    height: 120px; /* Ajuste o tamanho conforme desejado */
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 160px; /* Move a bola 30px acima do topo do container */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Garante que a bola esteja acima do conteúdo do container */
+  }
+  

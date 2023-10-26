@@ -30,6 +30,7 @@ h2 {
 .right {
     display: flex;
     align-items: center; /* Centraliza verticalmente */
+    margin-right: 30px;
   }
   
   .right span {

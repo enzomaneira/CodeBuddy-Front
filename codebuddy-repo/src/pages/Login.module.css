@@ -1,0 +1,15 @@
+.loginBackground {
+    background-color: gray;
+    z-index: 0; /* Defina um valor menor do que o z-index do container */
+}
+
+.centeredContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}  
+
+.button {
+    margin-top: auto;
+}
