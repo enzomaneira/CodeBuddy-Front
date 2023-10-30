@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./ContainerP.module.css";
 
-const ContainerP = ({ children }) => {
+const ContainerP = ({ children, backgroundColor }) => {
+  const containerStyle = {
+    backgroundColor: backgroundColor,
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={containerStyle}>
       {children}
     </div>
   );
