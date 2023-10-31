@@ -11,6 +11,8 @@ import {
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import Profile from './pages/Profile.jsx'
+import Grupos from './pages/Grupos.jsx'
+import CriarGrupo from './pages/CriarGrupo.jsx'
 
 
 const router = createBrowserRouter([
@@ -29,7 +31,16 @@ const router = createBrowserRouter([
   {
     path: "/Profile",
     element: <Profile/>,
+  },
+  {
+    path: "/Grupos",
+    element: <Grupos/>,
+  },
+  {
+    path: "/CriarGrupo",
+    element: <CriarGrupo/>,
   }
+  
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

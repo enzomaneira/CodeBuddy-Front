@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 function CadastroForm(){
   return (
     <form>
-        <WhiteBall/>
       <div className={styles.formGroup}>
       <input type="text" id="login" name="login" placeholder="Login" />
       </div>

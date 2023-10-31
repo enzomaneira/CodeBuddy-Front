@@ -13,3 +13,9 @@
 .button {
     margin-top: auto;
 }
+
+
+.whiteBall {
+    transform: translateX(685%) translateY(-179%);
+  }
+  

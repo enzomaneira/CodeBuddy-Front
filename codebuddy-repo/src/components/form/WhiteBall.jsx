@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./WhiteBall.module.css";
 import bola from "../../img/ProfileIcon.png";
 
-const WhiteBall = () => {
+const WhiteBall = (props) => {
   return (
-    <div className={styles.whiteBall}>
+    <div className={`${styles.whiteBall} ${props.className}`}>
       <img src={bola} alt="Imagem da Bola" width="120" height="120" />
     </div>
   );

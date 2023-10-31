@@ -1,20 +1,35 @@
+.whiteBall {
+  position: absolute;
+  top: 12%;
+  left: 16.5%;
+}
+
 .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza verticalmente */
-    margin-right: 700px; 
-    margin-top: 100px;
-  }
-  
-  .container {
-    position: relative; /* Adicione position: relative; ao ContainerP */
-    background-color: orange;
-    color: white; /* Cor do texto no ContainerP */
-  }
-  
-  .whiteBall {
-    position: absolute;
-    top: -20px; /* Ajuste a posição vertical desejada (para cima) */
-    left: -20px; /* Ajuste a posição horizontal desejada (para a esquerda) */
-  }
-  
+  align-items: center; /* Centraliza verticalmente */
+  margin-left: -60%; /* Adicione margem à esquerda */
+  margin-top: 10%;
+}
+
+.textContainer {
+  margin-top: -100px;
+}
+
+.botaoGrupo {
+  margin-left: 60%;
+  margin-top: -15%;
+}
+
+.botaoContainer {
+  display: flex;
+  align-items: center; 
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+line-height: normal;
+font-family: Inter;
+
+}
+
+.texto {
+  padding-left: 10px;
+}

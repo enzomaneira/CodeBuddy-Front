@@ -1,0 +1,15 @@
+.botao {
+    background-color: #B5C033;
+    width: 31px;
+    height: 27px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+text-transform: capitalize;
+color: white;
+}

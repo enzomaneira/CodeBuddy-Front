@@ -1,0 +1,12 @@
+.container {
+    width: 1000px;
+    height: 550px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #BEC941;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

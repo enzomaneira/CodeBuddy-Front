@@ -1,0 +1,15 @@
+.container {
+    background-color: #B5C033;
+    color: white;
+    border-radius: 25px;
+    width: 400px;
+    height: 200px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: bold;
+    font-style: normal;
+    font-weight: 800;
+}
