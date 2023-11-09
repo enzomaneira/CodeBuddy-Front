@@ -4,11 +4,13 @@
 }
 
 .centeredContainer {
-    position: relative; /* Adicione position: relative; para referenciar o whiteBall */
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; 
+    padding: 10px;
+    width: 100%;
 }  
 
 .button {
