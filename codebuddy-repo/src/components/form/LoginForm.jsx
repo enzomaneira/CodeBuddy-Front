@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./LoginForm.module.css";
-import WhiteBall from "./WhiteBall"; 
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   return (
-    <form>
+    <form className={styles.body}>
       <div className={styles.formGroup}>
       <input type="text" id="login" name="login" placeholder="Login" />
       </div>
