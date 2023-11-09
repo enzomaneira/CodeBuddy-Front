@@ -12,6 +12,8 @@
     z-index: 1000; /* Define a ordem de empilhamento (pode ajustar conforme necessário) */
     margin-top: 1px;
   }
+
+
   
 
 h2 {
@@ -19,7 +21,6 @@ h2 {
     margin-left: 50px;
 }
 
-/* Estilos para os links de Login e Registrar */
 .right a {
     text-decoration: none;
     color: white;
@@ -36,4 +37,4 @@ h2 {
   .right span {
     margin-right: 50px; /* Adicione margem entre "Login" e "Registrar" */
   }
-  
+
