@@ -4,6 +4,7 @@
 }
 
 .centeredContainer {
+    position: relative; /* Adicione position: relative; para referenciar o whiteBall */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +15,8 @@
     margin-top: auto;
 }
 
-
 .whiteBall {
-    transform: translateX(685%) translateY(-179%);
-  }
-  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-160%);
+} 
