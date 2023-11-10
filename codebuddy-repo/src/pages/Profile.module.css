@@ -1,7 +1,17 @@
+.infosContainer {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; 
+  padding: 10px;
+  width: 90%;
+}
+
 .whiteBall {
   position: absolute;
-  top: 12%;
-  left: 16.5%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-160%);
 }
 
 .page {
@@ -11,6 +21,9 @@
 }
 
 .textContainer {
+  position: flex;
+  justify-content: center;
+  align-items: center; 
   margin-top: -100px;
 }
 
@@ -25,9 +38,8 @@
   color: white;
   font-size: 20px;
   font-weight: 800;
-line-height: normal;
-font-family: Inter;
-
+  line-height: normal;
+  font-family: Inter;
 }
 
 .texto {

@@ -1,5 +1,6 @@
 .container {
     width: 300px;
+    height: 30%; 
     height: calc(300px * (276 / 200));
     border-radius: 25px;
     background: #87ABDA;

@@ -11,19 +11,21 @@ const Profile = () => {
   return (
     <div className={styles.page}>
       <Navbar/> 
-      <WhiteBall className={styles.whiteBall} />
-      <ContainerP backgroundColor="orange" className={styles.container}>
-        <div className={styles.textContainer}>
-        <div><TextContainer texto="Username"/></div>
-        <div><TextContainer texto="Grupos"/></div>
+      <div className={styles.infosContainer}>
+        <WhiteBall className={styles.whiteBall} />
+        <ContainerP backgroundColor="orange" className={styles.container}>
+          <div className={styles.textContainer}>
+            <div><TextContainer texto="Username"/></div>
+            <div><TextContainer texto="Grupos"/></div>
+          </div>
+        </ContainerP>
         </div>
-      </ContainerP>
-      <div className={styles.botaoGrupo}>
-      <BotaoGrupo/>
-      <div className={styles.botaoContainer}>
-      <BotaoCriarGrupo/>
-      <div className={styles.texto}>Criar Grupo </div>
-      </div>
+        <div className={styles.botaoGrupo}>
+          <BotaoGrupo/>
+        <div className={styles.botaoContainer}>
+          <BotaoCriarGrupo/>
+        <div className={styles.texto}>Criar Grupo </div>
+        </div>
       </div>
     </div>
   );
