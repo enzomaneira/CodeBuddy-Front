@@ -8,11 +8,11 @@ import {
   RouterProvider
 } from 'react-router-dom'
 
-import Login from './pages/Login.jsx'
-import Register from './pages/Register.jsx'
-import Profile from './pages/Profile.jsx'
-import Grupos from './pages/Grupos.jsx'
-import CriarGrupo from './pages/CriarGrupo.jsx'
+import Login from './pages/Login/Login.jsx'
+import Register from './pages/Cadastro/Register.jsx'
+import Profile from './pages/Perfil/Profile.jsx'
+import Grupos from './pages/Grupo/Grupos.jsx'
+import CriarGrupo from './pages/CriarGrupo/CriarGrupo.jsx'
 
 
 const router = createBrowserRouter([

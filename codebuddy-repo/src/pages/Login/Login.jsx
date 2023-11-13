@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import ContainerP from "../components/ContainerP";
+import ContainerP from "../../components/ContainerP";
 import styles from "./Login.module.css";
-import Footer from "../components/Footer";
-import LoginForm from "../components/form/LoginForm";
-import WhiteBall from "../components/form/WhiteBall";
+import Footer from "../../components/Footer";
+import LoginForm from "../../components/form/LoginForm";
+import WhiteBall from "../../components/form/WhiteBall";
 
 const Login = () => {
   useEffect(() => {

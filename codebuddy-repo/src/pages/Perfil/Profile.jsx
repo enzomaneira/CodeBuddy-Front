@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerP from "../components/ContainerP";
+import ContainerP from "../../components/ContainerP";
 import styles from "./Profile.module.css";
-import WhiteBall from "../components/form/WhiteBall";
-import Navbar from '../components/Navbar';
-import TextContainer from "../components/TextContainer";
-import BotaoGrupo from "../components/botao/BotaoGrupo"
-import BotaoCriarGrupo from "../components/botao/BotaoCriarGrupo";
+import WhiteBall from "../../components/form/WhiteBall";
+import Navbar from '../../components/Navbar';
+import TextContainer from "../../components/TextContainer";
+import BotaoGrupo from "./botao/BotaoGrupo"
+import BotaoCriarGrupo from "../CriarGrupo/botao/BotaoCriarGrupo";
 
 const Profile = () => {
   return (
