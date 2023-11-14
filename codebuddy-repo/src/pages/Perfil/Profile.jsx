@@ -1,9 +1,9 @@
 import React from "react";
-import ContainerP from "../../components/ContainerP";
+import ContainerP from "../../components/container/ContainerM";
 import styles from "./Profile.module.css";
 import WhiteBall from "../../components/form/WhiteBall";
 import Navbar from '../../components/Navbar';
-import TextContainer from "../../components/TextContainer";
+import TextContainer from "../../components/container/TextContainer";
 import BotaoGrupo from "./botao/BotaoGrupo"
 import BotaoCriarGrupo from "../CriarGrupo/botao/BotaoCriarGrupo";
 

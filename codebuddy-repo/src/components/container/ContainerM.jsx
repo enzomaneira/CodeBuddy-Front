@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./ContainerP.module.css";
+import styles from "./ContainerM.module.css";
 
-const ContainerP = ({ children, backgroundColor }) => {
+const ContainerM = ({ children, backgroundColor }) => {
   const containerStyle = {
     backgroundColor: backgroundColor,
   };
@@ -13,4 +13,4 @@ const ContainerP = ({ children, backgroundColor }) => {
   );
 };
 
-export default ContainerP;
+export default ContainerM;

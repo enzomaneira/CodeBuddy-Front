@@ -1,6 +1,6 @@
 import styles from "./Register.module.css";
 import React, { useEffect } from "react";
-import ContainerP from "../../components/ContainerP"; // Certifique-se de importar ContainerP
+import ContainerP from "../../components/container/ContainerM"; // Certifique-se de importar ContainerP
 import Footer from "../../components/Footer";
 import CadastroForm from "../../components/form/CadastroForm";
 import WhiteBall from "../../components/form/WhiteBall";
