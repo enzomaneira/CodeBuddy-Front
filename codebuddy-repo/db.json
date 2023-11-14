@@ -1,0 +1,45 @@
+{
+  "users": [
+      {
+          "id": 1, 
+          "nome": "maneira",
+          "password": "senha123",
+          "qtdgrupos": 0,
+          "grupos": [1, 2, 3]
+      },
+      {
+          "id": 2,
+          "nome": "jonga",
+          "password": "senha111",
+          "qtdgrupos": 0,
+          "grupos": [1, 2, 3]
+      },
+      {
+          "id": 3,
+          "nome": "tefinho",
+          "password": "senha000",
+          "qtdgrupos": 0, 
+          "grupos": [2, 3]
+      }
+  ],
+  "grupos": [
+    {
+      "id": 1,
+      "nome": "Grupo A",
+      "alunos": [1, 2],
+      "descrição": "bla bla bla"
+    },
+    {
+      "id": 2,
+      "nome": "Grupo B",
+      "alunos": [1, 2, 3],
+      "descrição": "bla bla bla"
+    },
+    {
+      "id": 3,
+      "nome": "Grupo C",
+      "alunos": [1, 2, 3],
+      "descrição": "bla bla bla"
+    }
+  ]
+}

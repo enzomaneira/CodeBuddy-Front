@@ -11,6 +11,7 @@
   
   .container {
     align-content: first baseline;
+    background-color: orange;
   }
   
   .buscarGrupo {
