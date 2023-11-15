@@ -27,3 +27,12 @@
     outline: none; /* Removendo o contorno ao focar no input */
   }
   
+
+
+.userContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+

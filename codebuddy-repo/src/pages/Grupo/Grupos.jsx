@@ -1,34 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
-import styles from "./Grupos.module.css";
 import ContainerP from "../../components/container/ContainerP";
+import styles from "./Grupos.module.css";
 
 const Grupos = () => {
-  const [users, setUsers] = useState([]);
-  const [grupos, setGrupos] = useState([]);
-  const [userGroups, setUserGroups] = useState([]);
-  const userId = 2; 
+  const [user, setUser] = useState(null);
+  const userId = 1; // Substitua pelo ID do usuário desejado
 
   useEffect(() => {
-    fetch('http://localhost:3000/users') 
+    fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
-        setUsers(data.users || []);
-        setGrupos(data.grupos || []);
+        setUsers(data);
+        const currentUser = data.find(user => user.id === 2);  // Remova as aspas ao redor de 2
+        setCurrentUser(currentUser);
+        console.log(currentUser);
       })
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => console.error('Error fetching users:', error));
   }, []);
-
-  useEffect(() => {
-    const user = users.find(user => user.id === userId);
-    if (user) {
-      const groupNames = user.grupos.map(groupId => {
-        const group = grupos.find(group => group.id === groupId);
-        return group ? group.nome : null;
-      });
-      setUserGroups(groupNames);
-    }
-  }, [userId, users, grupos]);
+  
 
   return (
     <div>
@@ -42,14 +32,24 @@ const Grupos = () => {
         />
       </div>
       <div className={styles.container}>
-        {userGroups.map((groupName, index) => (
-          <ContainerP key={index}>
-            <p>{groupName}</p>
-          </ContainerP>
-        ))}
+        {console.log('Rendering Grupos component')} {/* Adicione esta linha */}
+        {user ? (
+          <div key={user.id} className={`${styles.userContainer}`}>
+            {user.grupos.map((grupo, index) => (
+              <ContainerP key={index}>
+                <p>{grupo}</p>
+              </ContainerP>
+            ))}
+          </div>
+        ) : (
+          <p>Carregando...</p>
+        )}
       </div>
     </div>
   );
+  
+  
+  
 };
 
 export default Grupos;

@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar';
 import TextContainer from "../../components/container/TextContainer";
 import BotaoGrupo from "./botao/BotaoGrupo";
 import BotaoCriarGrupo from "../CriarGrupo/botao/BotaoCriarGrupo";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const [users, setUsers] = useState([]);
@@ -18,7 +19,9 @@ const Profile = () => {
         setUsers(data);
         const currentUser = data.find(user => user.id === "2");
         setCurrentUser(currentUser);
-      });
+        console.log(currentUser);
+      })
+      .catch(error => console.error('Error fetching users:', error));
   }, []);
 
   return (
@@ -34,7 +37,7 @@ const Profile = () => {
                   <TextContainer texto={`Name: ${currentUser.nome}`} />
                 </div>
                 <div>
-                  <TextContainer texto={`Grupos: ${currentUser.grupos}`} />
+                  <TextContainer texto={`Grupos: ${currentUser.qtdgrupos}`} />
                 </div>
               </>
             )}
@@ -42,9 +45,12 @@ const Profile = () => {
         </ContainerP>
       </div>
       <div className={styles.botaoGrupo}>
+      <Link to="/Grupos" style={{ textDecoration: 'none' }}>
         <BotaoGrupo />
+        </Link>
         <div className={styles.botaoContainer}>
           <BotaoCriarGrupo />
+          
           <div className={styles.texto}>Criar Grupo </div>
         </div>
       </div>
