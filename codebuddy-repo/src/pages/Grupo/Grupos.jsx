@@ -5,14 +5,14 @@ import styles from "./Grupos.module.css";
 
 const Grupos = () => {
   const [user, setUser] = useState(null);
-  const userId = 1; // Substitua pelo ID do usuário desejado
+  const userId = 1; 
 
   useEffect(() => {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
         setUsers(data);
-        const currentUser = data.find(user => user.id === 2);  // Remova as aspas ao redor de 2
+        const currentUser = data.find(user => user.id === 2); 
         setCurrentUser(currentUser);
         console.log(currentUser);
       })
@@ -32,7 +32,7 @@ const Grupos = () => {
         />
       </div>
       <div className={styles.container}>
-        {console.log('Rendering Grupos component')} {/* Adicione esta linha */}
+        {console.log('Rendering Grupos component')} 
         {user ? (
           <div key={user.id} className={`${styles.userContainer}`}>
             {user.grupos.map((grupo, index) => (
