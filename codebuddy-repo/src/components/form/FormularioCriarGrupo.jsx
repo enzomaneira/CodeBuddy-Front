@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FormularioCriarGrupo.module.css";
+import { Link } from "react-router-dom"; 
 
 const FormularioCriarGrupo = () => {
   return (
@@ -23,7 +24,7 @@ const FormularioCriarGrupo = () => {
         <textarea id="descricao" name="descricao" className={styles.textAreaDescription} placeholder="Descrição"/>
       </div>
       <button className={styles.submitButton} type="submit">
-        Criar Grupo
+        <Link to="/Grupos">Criar Grupo</Link>
       </button>
     </form>
   );

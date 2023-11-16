@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import ContainerP from "../components/ContainerP";
+import ContainerM from "../../components/container/ContainerM";
 import styles from "./Login.module.css";
-import Footer from "../components/Footer";
-import LoginForm from "../components/form/LoginForm";
-import WhiteBall from "../components/form/WhiteBall";
+import Footer from "../../components/Footer";
+import LoginForm from "../../components/form/LoginForm";
+import WhiteBall from "../../components/form/WhiteBall";
 
 const Login = () => {
   useEffect(() => {
@@ -17,9 +17,9 @@ const Login = () => {
     <div className={styles.body}>
       <div className={styles.centeredContainer}>
         <WhiteBall className={styles.whiteBall} />
-        <ContainerP>
+        <ContainerM>
           <LoginForm />
-        </ContainerP>
+        </ContainerM>
       </div>
       <Footer />
     </div>

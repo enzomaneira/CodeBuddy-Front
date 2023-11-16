@@ -1,0 +1,27 @@
+/* Grupos.module.css */
+.titulo {
+    color: white;
+    font-size: 300%;
+    font-weight: bold;
+    align-items: center;
+    display: flex; /* Adicionado para centralizar verticalmente */
+    padding-left: 15%;
+    padding-top: 5%;
+  }
+
+  .container {
+    align-content: first baseline;
+  }
+
+  .buscarGrupo {
+    background-color: darkblue;
+    border-radius: 25px;
+    color: white;
+    padding: 8px 20px; /* Aumentando o padding para tornar mais longo */
+    margin-left: 15px; /* Ajuste da margem para movê-lo mais para a direita */
+    cursor: pointer;
+    font-size: 70%;
+    font-weight: lighter;
+    border: none; /* Removendo a borda padrão do input */
+    outline: none; /* Removendo o contorno ao focar no input */
+  }
