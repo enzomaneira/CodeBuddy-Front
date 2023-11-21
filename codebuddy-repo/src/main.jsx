@@ -13,6 +13,7 @@ import Register from './pages/Cadastro/Register.jsx'
 import Profile from './pages/Perfil/Profile.jsx'
 import Grupos from './pages/Grupo/Grupos.jsx'
 import CriarGrupo from './pages/CriarGrupo/CriarGrupo.jsx'
+import GrupoDetails from './pages/GrupoDetails/GrupoDetails.jsx'
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/CriarGrupo",
     element: <CriarGrupo/>,
+  },
+  {
+    path: "/Grupo/:id",
+    element: <GrupoDetails/>
   }
   
 ])

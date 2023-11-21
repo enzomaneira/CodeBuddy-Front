@@ -4,15 +4,15 @@ import ContainerP from "../../components/container/ContainerP";
 import styles from "./Grupos.module.css";
 
 const Grupos = () => {
-  const [user, setUser] = useState(null);
+  const [users, setUser] = useState(null);
   const userId = 1; 
 
   useEffect(() => {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
-        setUsers(data);
-        const currentUser = data.find(user => user.id === 2); 
+        setUser(data);
+        const currentUser = data.find(users => users.id === 2); 
         setCurrentUser(currentUser);
         console.log(currentUser);
       })
@@ -34,8 +34,8 @@ const Grupos = () => {
       <div className={styles.container}>
         {console.log('Rendering Grupos component')} 
         {user ? (
-          <div key={user.id} className={`${styles.userContainer}`}>
-            {user.grupos.map((grupo, index) => (
+          <div key={users.id} className={`${styles.userContainer}`}>
+            {users.grupos.map((grupo, index) => (
               <ContainerP key={index}>
                 <p>{grupo}</p>
               </ContainerP>
