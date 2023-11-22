@@ -4,7 +4,7 @@ import styles from "./Posts.module.css";
 const Posts = () => {
 
 return (
-    <div>
+    <div className={styles.post}>
         post
     </div>
 );

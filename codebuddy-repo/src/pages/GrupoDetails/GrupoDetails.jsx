@@ -12,8 +12,12 @@ return (
         <Navbar/>
     </div>
     <div>
-        <ContainerG>Grupo XXXX</ContainerG>
-        <div><Posts/></div>
+        <ContainerG>
+            <div className={styles.title}>Grupo XXX</div>
+            <div>
+                <Posts/>
+                </div>
+        </ContainerG>
     </div>
     </div>
 );
