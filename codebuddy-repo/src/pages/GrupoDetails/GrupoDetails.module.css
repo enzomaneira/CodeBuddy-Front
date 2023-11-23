@@ -9,4 +9,9 @@ line-height: normal;
 text-transform: capitalize;
 padding-left: 5%;
 padding-top: 1%;
+display: block;
+}
+
+.post {
+    display: block;
 }

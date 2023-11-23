@@ -50,7 +50,6 @@ const Profile = () => {
         </Link>
         <div className={styles.botaoContainer}>
           <BotaoCriarGrupo />
-          
           <div className={styles.texto}>Criar Grupo </div>
         </div>
       </div>

@@ -1,15 +1,16 @@
 .botao {
     background-color: #B5C033;
-    width: 31px;
-    height: 27px;
+    width: auto; /* Definir a largura como automática para se ajustar ao conteúdo */
+    padding: 10px 20px; /* Adicionar preenchimento para tornar o botão clicável */
     border-radius: 25px;
     text-align: center;
     margin-top: 10px;
     font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-text-transform: capitalize;
-color: white;
+    font-size: 18px; /* Reduzir o tamanho da fonte para melhorar a acessibilidade */
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    color: white;
+    cursor: pointer; /* Adicionar estilo de cursor para indicar clicabilidade */
 }

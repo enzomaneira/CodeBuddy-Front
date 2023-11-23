@@ -30,16 +30,18 @@
 .botaoGrupo {
   margin-left: 60%;
   margin-top: -15%;
+  z-index: 1; /* Adicione um índice Z para garantir que o botão esteja sobreposto aos outros elementos */
 }
 
 .botaoContainer {
   display: flex;
-  align-items: center; 
+  align-items: center;
   color: white;
   font-size: 20px;
   font-weight: 800;
   line-height: normal;
   font-family: Inter;
+  position: relative; /* Adicione position: relative para garantir que z-index funcione */
 }
 
 .texto {

@@ -1,7 +1,6 @@
 .post {
     width: 80%;
     height: 15%;
-    flex-shrink: 0;
     border-radius: 25px;
     background-color: white;
     position: absolute;
@@ -11,4 +10,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: block;
 }

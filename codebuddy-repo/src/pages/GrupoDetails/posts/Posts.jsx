@@ -5,7 +5,7 @@ const Posts = () => {
 
 return (
     <div className={styles.post}>
-        post
+        post xxxxxxx
     </div>
 );
 

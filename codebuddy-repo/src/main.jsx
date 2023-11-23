@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     element: <CriarGrupo/>,
   },
   {
-    path: "/Grupo/:id",
+    path: "/Grupo/:nome",
     element: <GrupoDetails/>
   }
   
