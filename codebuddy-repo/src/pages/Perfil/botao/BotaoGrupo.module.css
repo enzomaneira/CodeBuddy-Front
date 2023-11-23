@@ -1,15 +1,23 @@
-.container {
-    background-color: #B5C033;
-    color: white;
-    border-radius: 25px;
-    width: 400px;
+/* BotaoGrupo.module.css */
+.link {
+    text-decoration: none;
+    color: white; /* Adicione esta linha para definir a cor do texto como branco */
+    width: 50%;
     height: 200px;
-    font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+  }
+  
+  .container {
+    background-color: #B5C033;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 60px;
     font-family: bold;
     font-style: normal;
     font-weight: 800;
-}
+    text-align: center;
+    cursor: pointer;
+  }
+  

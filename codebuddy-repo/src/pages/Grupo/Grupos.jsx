@@ -4,21 +4,21 @@ import ContainerP from "../../components/container/ContainerP";
 import styles from "./Grupos.module.css";
 
 const Grupos = () => {
-  const [user, setUser] = useState(null);
-  const userId = 1; 
+  const [user, setUser] = useState({}); // Inicializado como um objeto vazio
+  const userId = 1;
 
   useEffect(() => {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
         setUser(data);
-        const currentUser = data.find(user => user.id === 2); 
-        setCurrentUser(currentUser);
+        const currentUser = data.find(user => user.id === 2);
+        // Remova a linha abaixo, pois setCurrentUser não está definido
+        // setCurrentUser(currentUser);
         console.log(currentUser);
       })
       .catch(error => console.error('Error fetching users:', error));
   }, []);
-  
 
   return (
     <div>
@@ -32,8 +32,8 @@ const Grupos = () => {
         />
       </div>
       <div className={styles.container}>
-        {console.log('Rendering Grupos component')} 
-        {user ? (
+        {console.log('Rendering Grupos component')}
+        {user && user.grupos ? (
           <div key={user.id} className={`${styles.userContainer}`}>
             {user.grupos.map((grupo, index) => (
               <ContainerP key={index}>
@@ -47,9 +47,6 @@ const Grupos = () => {
       </div>
     </div>
   );
-  
-  
-  
 };
 
 export default Grupos;
