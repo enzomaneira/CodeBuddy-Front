@@ -1,5 +1,4 @@
-/* Grupos.module.css */
-<<<<<<< HEAD
+
 .titulo {
     color: white;
     font-size: 300%;
@@ -26,46 +25,3 @@
     border: none; /* Removendo a borda padrão do input */
     outline: none; /* Removendo o contorno ao focar no input */
   }
-=======
-.userContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.groupContainer {
-  background-color: orange;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px; /* Defina a largura desejada para os containers dos grupos */
-}
-
-.titulo {
-  color: white;
-  font-size: 300%;
-  font-weight: bold;
-  align-items: center;
-  display: flex; /* Adicionado para centralizar verticalmente */
-  padding-left: 15%;
-  padding-top: 5%;
-}
-
-.container {
-  align-content: first baseline;
-  /* Remova ou comente a cor de fundo laranja do container principal */
-}
-
-.buscarGrupo {
-  background-color: darkblue;
-  border-radius: 25px;
-  color: white;
-  padding: 8px 20px;
-  margin-left: 15px;
-  cursor: pointer;
-  font-size: 70%;
-  font-weight: lighter;
-  border: none;
-  outline: none;
-}
->>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35

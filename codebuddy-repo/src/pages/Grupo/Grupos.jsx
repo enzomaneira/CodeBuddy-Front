@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-/* Grupos.jsx */
-import React from "react";
-import Navbar from "../../components/Navbar";
-import styles from "./Grupos.module.css";
-import ContainerP from "../../components/container/ContainerP";
-
-const Grupos = () => {
-=======
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import ContainerP from "../../components/container/ContainerP";
 import styles from "./Grupos.module.css";
 import TextContainer from "../../components/container/TextContainer";
+import { Link } from "react-router-dom";
 
 const Grupos = () => {
   const [user, setUser] = useState(null);
@@ -20,7 +12,7 @@ const Grupos = () => {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
-        const currentUser = data.find(user => user.id === 2);
+        const currentUser = data.find(user => user.id === 3);
         setUser(currentUser);
         console.log(currentUser);
       })
@@ -31,15 +23,17 @@ const Grupos = () => {
     if (user && user.qtdgrupos > 0) {
       return user.grupos.map((grupo, index) => (
         <div key={index} className={styles.groupContainer}>
-          <TextContainer texto={`${grupo}`} />
+          <Link to={`/Grupo/${encodeURIComponent(grupo)}`}>
+            <TextContainer texto={`${grupo}`} />
+          </Link>
         </div>
       ));
     } else {
       return <div>No groups available.</div>;
     }
   };
+  
 
->>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35
   return (
     <div>
       <Navbar />
@@ -52,9 +46,6 @@ const Grupos = () => {
         />
       </div>
       <div className={styles.container}>
-<<<<<<< HEAD
-        <ContainerP/>
-=======
         {console.log('Rendering Grupos component')}
         {user && user.grupos ? (
           <div className={styles.userContainer}>
@@ -63,14 +54,9 @@ const Grupos = () => {
         ) : (
           <p>Carregando...</p>
         )}
->>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Grupos;
-=======
-export default Grupos;
->>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35
