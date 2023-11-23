@@ -2,23 +2,33 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import ContainerP from "../../components/container/ContainerP";
 import styles from "./Grupos.module.css";
+import TextContainer from "../../components/container/TextContainer";
 
 const Grupos = () => {
-  const [user, setUser] = useState({}); // Inicializado como um objeto vazio
-  const userId = 1;
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
-        setUser(data);
         const currentUser = data.find(user => user.id === 2);
-        // Remova a linha abaixo, pois setCurrentUser não está definido
-        // setCurrentUser(currentUser);
+        setUser(currentUser);
         console.log(currentUser);
       })
       .catch(error => console.error('Error fetching users:', error));
   }, []);
+
+  const renderGroups = () => {
+    if (user && user.qtdgrupos > 0) {
+      return user.grupos.map((grupo, index) => (
+        <div key={index} className={styles.groupContainer}>
+          <TextContainer texto={`${grupo}`} />
+        </div>
+      ));
+    } else {
+      return <div>No groups available.</div>;
+    }
+  };
 
   return (
     <div>
@@ -34,12 +44,8 @@ const Grupos = () => {
       <div className={styles.container}>
         {console.log('Rendering Grupos component')}
         {user && user.grupos ? (
-          <div key={user.id} className={`${styles.userContainer}`}>
-            {user.grupos.map((grupo, index) => (
-              <ContainerP key={index}>
-                <p>{grupo}</p>
-              </ContainerP>
-            ))}
+          <div className={styles.userContainer}>
+            {renderGroups()}
           </div>
         ) : (
           <p>Carregando...</p>

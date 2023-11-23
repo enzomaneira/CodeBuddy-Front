@@ -27,11 +27,14 @@
   margin-top: -100px;
 }
 
+
 .botaoGrupo {
   margin-left: 60%;
   margin-top: -15%;
-  z-index: 1; /* Adicione um índice Z para garantir que o botão esteja sobreposto aos outros elementos */
+  cursor: pointer;
 }
+
+
 
 .botaoContainer {
   display: flex;

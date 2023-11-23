@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContainerP from "../../components/container/ContainerM";
 import styles from "./Profile.module.css";
 import WhiteBall from "../../components/form/WhiteBall";
@@ -17,9 +17,8 @@ const Profile = () => {
       .then(response => response.json())
       .then(data => {
         setUsers(data);
-        const currentUser = data.find(users => users.id === "2");
+        const currentUser = data.find(user => user.id === 2);
         setCurrentUser(currentUser);
-        console.log(currentUser);
       })
       .catch(error => console.error('Error fetching users:', error));
   }, []);
@@ -37,7 +36,7 @@ const Profile = () => {
                   <TextContainer texto={`Name: ${currentUser.nome}`} />
                 </div>
                 <div>
-                  <TextContainer texto={`Grupos: ${currentUser.qtdgrupos}`} />
+                  <TextContainer texto={`Quantidade de Grupos: ${currentUser.qtdgrupos}`} />
                 </div>
               </>
             )}
@@ -45,9 +44,7 @@ const Profile = () => {
         </ContainerP>
       </div>
       <div className={styles.botaoGrupo}>
-      <Link to="/Grupos" style={{ textDecoration: 'none' }}>
         <BotaoGrupo />
-        </Link>
         <div className={styles.botaoContainer}>
           <BotaoCriarGrupo />
           <div className={styles.texto}>Criar Grupo </div>
