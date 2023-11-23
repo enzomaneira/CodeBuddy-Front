@@ -4,10 +4,13 @@
 }
 
 .centeredContainer {
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; 
+    padding: 10px;
+    width: 100%;
 }  
 
 .button {
@@ -15,6 +18,20 @@
 }
 
 .whiteBall {
+<<<<<<< HEAD
+<<<<<<< HEAD:codebuddy-repo/src/pages/Cadastro/Register.module.css
     transform: translateX(530%) translateY(-179%);
   }
   
+=======
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-160%);
+} 
+>>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35:codebuddy-repo/src/pages/Login/Login.module.css
+=======
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-160%);
+} 
+>>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35

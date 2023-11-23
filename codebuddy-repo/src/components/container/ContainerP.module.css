@@ -1,4 +1,5 @@
 .container {
+<<<<<<< HEAD
   width: 20%;
   height: 20%;
   flex-shrink: 0;
@@ -11,3 +12,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+=======
+  width: 200px; /* Ajuste a largura conforme necessário */
+  height: 100px; /* Ajuste a altura conforme necessário */
+  border-radius: 10px;
+  background-color: orange;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+  font-weight: bold;
+  color: white;
+}
+>>>>>>> 3b4e7083dfd4ba1a307c64608fc6765354893c35

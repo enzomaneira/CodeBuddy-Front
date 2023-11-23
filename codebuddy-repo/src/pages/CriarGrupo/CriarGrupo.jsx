@@ -12,7 +12,7 @@ const CriarGrupo = () => {
       <Navbar />
       <ContainerG>
         <h2>Criar Grupo</h2>
-        <FormularioCriarGrupo /> 
+        <FormularioCriarGrupo/> 
       </ContainerG>
       <Footer />
     </div>

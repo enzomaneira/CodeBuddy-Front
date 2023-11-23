@@ -1,6 +1,6 @@
 .container {
     width: 1000px;
-    height: 550px;
+    height: 80%;
     flex-shrink: 0;
     border-radius: 25px;
     background: #BEC941;
