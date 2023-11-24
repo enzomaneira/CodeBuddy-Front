@@ -1,9 +1,11 @@
+// App.jsx
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import './App.css';
 import pc_main from "/pc_main.png";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
+import styles from "./App.css";
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
           </Link>
         </div>
         <div className='image-pc'>
-          <img src={pc_main} alt="CodeBoddu logo" />
+          <img className={styles.img} src={pc_main} alt="CodeBoddu logo" />
         </div>
       </div>
       <Footer />
