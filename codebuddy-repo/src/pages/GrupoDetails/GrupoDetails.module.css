@@ -1,17 +1,27 @@
-.title {
-    color: #FFF;
-text-align: left;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-text-transform: capitalize;
-padding-left: 5%;
-padding-top: 1%;
-display: block;
-}
+
 
 .post {
     display: block;
+    padding-top: 10%;
+    background-color: grey;
 }
+
+.bottomImagesContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bottomImage {
+    width: 30px;
+    height: auto;
+    margin: 25px; /* Ajuste conforme necessário */
+  }
+  
+  .inverted {
+    transform: scaleX(-1);
+  }
+  

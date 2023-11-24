@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 const CriarGrupo = () => {
   return (
-    <div className={styles.content}>
+    <div className={styles.content} style={{ backgroundColor: "#BEC941" }}>
       <Navbar />
-      <ContainerG>
+      <ContainerG className={styles.content} style={{ backgroundColor: "#BEC941" }}>
         <h2>Criar Grupo</h2>
         <FormularioCriarGrupo/> 
       </ContainerG>
