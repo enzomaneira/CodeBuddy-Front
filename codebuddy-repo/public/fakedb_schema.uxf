@@ -1,0 +1,32 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>440</x><y>100</y><w>210</w><h>100</h></coordinates><panel_attributes>_Professor_
+--
+int id;
+string nome;
+int qtdGrupo;
+Grupo&lt;List&gt; grupos;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>290</y><w>210</w><h>130</h></coordinates><panel_attributes>_Grupo de Estudos_
+--
+int id;
+string nome;
+int qtdAlunos;
+Aluno&lt;List&gt; alunos;
+Post &lt;List&gt; posts;
+Desafio&lt;List&gt; desafios;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>290</y><w>210</w><h>130</h></coordinates><panel_attributes>_Post_
+--
+int id;
+Grupo grupo;
+boolean professorAluno;
+Aluno aluno;
+Professor professor;
+string texto:</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>480</y><w>210</w><h>120</h></coordinates><panel_attributes>_Desafio_
+--
+int id;
+string nome;
+string texto;
+Grupo grupo;
+Professor professor;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>110</y><w>210</w><h>100</h></coordinates><panel_attributes>_Aluno_
+--
+int id;
+string nome;
+int qtdGrupo;
+Grupo&lt;List&gt; grupos;</panel_attributes><additional_attributes></additional_attributes></element></diagram>
