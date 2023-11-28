@@ -12,20 +12,29 @@ const Desafios = () => {
 
   useEffect(() => {
     const fetchDesafios = async () => {
-        try {
-          const response = await fetch(`http://localhost:3000/Desafios?grupo.nome=${encodeURIComponent(grupoNome)}`);
-          const data = await response.json();
-          setDesafios(data || []);
-        } catch (error) {
-          console.error('Error fetching desafios:', error);
+      try {
+        // Recupera o ID do grupo a partir do nome
+        const responseGrupos = await fetch(`http://localhost:3000/grupos?nome=${encodeURIComponent(grupoNome)}`);
+        const dataGrupos = await responseGrupos.json();
+        const grupo = dataGrupos[0];
+
+        // Se encontrou o grupo, então busca os desafios associados
+        if (grupo) {
+          const responseDesafios = await fetch(`http://localhost:3000/Desafios?grupoId=${encodeURIComponent(grupo.id)}`);
+          const dataDesafios = await responseDesafios.json();
+          setDesafios(dataDesafios || []);
+        } else {
+          console.warn(`Grupo não encontrado com o nome ${grupoNome}`);
         }
-      };
-      
+      } catch (error) {
+        console.error('Error fetching desafios:', error);
+      }
+    };
 
     fetchDesafios();
   }, [grupoNome]);
 
-return (
+  return (
     <div>
       <Navbar />
       <ContainerG style={{ backgroundColor: "orange" }}>
@@ -47,8 +56,6 @@ return (
       </ContainerG>
     </div>
   );
-  
-  
 };
 
 export default Desafios;

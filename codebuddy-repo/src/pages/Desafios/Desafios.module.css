@@ -13,7 +13,7 @@
 .desafiosContainer {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; /* Adapte conforme necessário */
+    margin-top: 20px;
   }
   
   .desafioItem {
