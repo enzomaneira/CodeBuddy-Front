@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import ContainerG from "../../components/container/ContainerG";
 import Navbar from "../../components/Navbar";
 import styles from "./Desafios.module.css";
+import backarrow from "../../img/backarrow.png";
 
 const Desafios = () => {
   const { grupoNome } = useParams();
@@ -24,23 +25,30 @@ const Desafios = () => {
     fetchDesafios();
   }, [grupoNome]);
 
-  return (
+return (
     <div>
       <Navbar />
       <ContainerG style={{ backgroundColor: "orange" }}>
-        <div className={styles.title}>Desafios - Grupo {grupoNome}</div>
-        <ul className={styles.desafiosList}>
+        <div className={styles.title}>
+          Desafios - Grupo {grupoNome}
+          <Link to="/profile" className={`${styles.img} img`}>
+            <img src={backarrow} alt="Back Arrow" />
+          </Link>
+        </div>
+        <div className={`${styles.desafiosList} ${styles.desafiosContainer}`}>
           {desafios.map(desafio => (
-            <li key={desafio.id} className={styles.desafioItem}>
+            <div key={desafio.id} className={styles.desafioItem}>
               <Link to={`/Desafios/${encodeURIComponent(desafio.nome)}`}>
                 {desafio.nome}
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </ContainerG>
     </div>
   );
+  
+  
 };
 
 export default Desafios;
