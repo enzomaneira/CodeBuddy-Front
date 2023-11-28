@@ -1,0 +1,37 @@
+/* NavbarDesafio.module.css */
+.navbarDesafio {
+    background-color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .title {
+    color: #FFF;
+    text-align: left;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    padding-left: 1%;
+    padding-top: 1%;
+    margin-right: 75%;
+    display: block;
+  }
+  
+  .img {
+    margin-left: auto;
+  }
+  
+  .img img {
+    width: 24px;
+    height: auto;
+    padding-top: 10%;
+    margin-left: 5px; /* Ajuste conforme necessário para dar espaço à esquerda */
+  }
+  

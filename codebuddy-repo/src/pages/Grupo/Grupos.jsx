@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import ContainerP from "../../components/container/ContainerP";
@@ -21,18 +22,21 @@ const Grupos = () => {
 
   const renderGroups = () => {
     if (user && user.qtdgrupos > 0) {
-      return user.grupos.map((grupo, index) => (
-        <div key={index} className={styles.groupContainer}>
-          <Link to={`/Grupo/${encodeURIComponent(grupo)}`}>
-            <TextContainer texto={`${grupo}`} />
-          </Link>
+      return (
+        <div className={styles.groupsGrid}>
+          {user.grupos.map((grupo, index) => (
+            <div key={index} className={styles.groupContainer}>
+            <Link key={index} to={`/Grupo/${encodeURIComponent(grupo)}`} className={styles.groupLink}>
+              <TextContainer texto={`${grupo}`} />
+            </Link>
+            </div>
+          ))}
         </div>
-      ));
+      );
     } else {
       return <div>No groups available.</div>;
     }
   };
-  
 
   return (
     <div>
@@ -45,10 +49,10 @@ const Grupos = () => {
           placeholder="Buscar Grupo"
         />
       </div>
-      <div className={styles.container}>
+      <div>
         {console.log('Rendering Grupos component')}
         {user && user.grupos ? (
-          <div className={styles.userContainer}>
+          <div>
             {renderGroups()}
           </div>
         ) : (

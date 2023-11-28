@@ -80,7 +80,66 @@
     }
   ],
   "Desafios": [
-    {"id": 1, "nome": "Fuba", "texto": "A definir 1", "grupoId": 1},
-    {"id": 2, "nome": "Fibonacci", "texto": "A definir 2", "grupoId": 1}
-  ]
+    {
+        "id": 1,
+        "nome": "Soma de Pares",
+        "texto": "Escreva um programa que calcule a soma dos números pares de 1 a 100. Você pode utilizar um loop para percorrer os números e somar apenas os pares.",
+        "grupoId": 1
+    },
+    {
+        "id": 2,
+        "nome": "Fibonacci",
+        "texto": "Implemente uma função para calcular o n-ésimo termo da sequência de Fibonacci. A sequência inicia com 0 e 1, e cada termo subsequente é a soma dos dois anteriores.",
+        "grupoId": 1
+    },
+    {
+        "id": 3,
+        "nome": "Bubble Sort",
+        "texto": "Crie um algoritmo de ordenação usando o método Bubble Sort. Este algoritmo compara pares de elementos adjacentes e os troca se estiverem na ordem errada, repetindo esse processo até que a lista esteja ordenada.",
+        "grupoId": 2
+    },
+    {
+        "id": 4,
+        "nome": "Busca Binária",
+        "texto": "Desenvolva um programa que realize busca binária em uma lista ordenada. A busca binária é um método eficiente que divide a lista pela metade a cada iteração, reduzindo o espaço de busca pela metade a cada passo.",
+        "grupoId": 2
+    },
+    {
+        "id": 5,
+        "nome": "Recursividade",
+        "texto": "Elabore uma função recursiva para calcular o fatorial de um número. O fatorial de um número n é o produto de todos os inteiros de 1 a n. Utilize a recursividade para resolver este problema de forma elegante.",
+        "grupoId": 3
+    },
+    {
+        "id": 6,
+        "nome": "Média Ponderada",
+        "texto": "Crie um programa que calcule a média ponderada de três notas. A média ponderada leva em consideração pesos diferentes para cada nota. Por exemplo, se as notas são A, B e C com pesos 2, 3 e 4, respectivamente, a média ponderada é calculada como (A*2 + B*3 + C*4) / (2 + 3 + 4).",
+        "grupoId": 3
+    },
+    {
+        "id": 7,
+        "nome": "Soma de Matrizes",
+        "texto": "Implemente uma função para somar duas matrizes. Lembre-se de verificar se as dimensões das matrizes são compatíveis para a operação de soma (mesmo número de linhas e colunas).",
+        "grupoId": 4
+    },
+    {
+        "id": 8,
+        "nome": "Validação de CPF",
+        "texto": "Desenvolva uma função que valide se um CPF é válido. Considere as regras de validação do CPF, como a fórmula de cálculo dos dígitos verificadores.",
+        "grupoId": 4
+    },
+    {
+        "id": 9,
+        "nome": "Árvore Binária",
+        "texto": "Construa uma estrutura de dados de árvore binária e implemente suas operações básicas, como inserção, remoção e busca. Utilize a estrutura de árvore binária para organizar dados de forma hierárquica.",
+        "grupoId": 5
+    },
+    {
+        "id": 10,
+        "nome": "Ordenação QuickSort",
+        "texto": "Crie um algoritmo de ordenação usando o método QuickSort. O QuickSort é um algoritmo de ordenação eficiente que utiliza a estratégia de divisão e conquista para ordenar uma lista.",
+        "grupoId": 5
+    }
+]
+
 }

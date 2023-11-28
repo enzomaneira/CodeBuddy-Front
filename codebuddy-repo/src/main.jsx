@@ -15,6 +15,7 @@ import Grupos from './pages/Grupo/Grupos.jsx'
 import CriarGrupo from './pages/CriarGrupo/CriarGrupo.jsx'
 import GrupoDetails from './pages/GrupoDetails/GrupoDetails.jsx'
 import Desafios from './pages/Desafios/Desafios.jsx'
+import DesafioDetails from './pages/DesafioDetails/DesafioDetails.jsx'
 
 
 
@@ -50,7 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/Desafios/:grupoNome",
     element: <Desafios/>
-
+  },
+  {
+    path: "/Desafios/:grupoNome/:desafioNome",
+    element: <DesafioDetails/>
   }
   
 ])
