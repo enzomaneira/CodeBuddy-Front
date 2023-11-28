@@ -8,7 +8,7 @@ return (
     <div>
     <div className={styles.post}>
     <Blueball className={styles.blueball}/>
-        post xxxxxxx
+    <div className={styles.text}>Boa noite caros, com combinado, postei o desafio que irá compor nossa nota N2 com prazo ate xx/xx. </div>
     </div>
     </div>
 );
