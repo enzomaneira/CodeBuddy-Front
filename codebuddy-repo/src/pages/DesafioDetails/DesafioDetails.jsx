@@ -6,6 +6,7 @@ import styles from "./DesafioDetails.module.css";
 import backarrow from "../../img/backarrow.png";
 import { Link } from "react-router-dom";
 import NavbarDesafio from "./componentsDesafio/NavbarDesafio";
+import BotaoDesafio from "./componentsDesafio/BotaoDesafio";
 
 const DesafioDetails = () => {
     const { grupoNome, desafioNome } = useParams();
@@ -52,6 +53,7 @@ return (
             <h2>{desafio.nome}</h2>
             <p>{desafio.texto}</p>
         </div>
+        <BotaoDesafio/>
         </ContainerG>
     )}
     </div>

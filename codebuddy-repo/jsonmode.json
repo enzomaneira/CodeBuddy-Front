@@ -1,0 +1,23 @@
+{
+    "alunos": [
+      { "id": 1, "nome": "Aluno1", "qtdGrupo": 2, "grupos": [1, 2] },
+      { "id": 2, "nome": "Aluno2", "qtdGrupo": 1, "grupos": [1] }
+    ],
+    "professores": [
+      { "id": 1, "nome": "Professor1", "qtdGrupo": 1, "grupos": [2] },
+      { "id": 2, "nome": "Professor2", "qtdGrupo": 2, "grupos": [1, 2] }
+    ],
+    "gruposDeEstudos": [
+      { "id": 1, "nome": "Grupo1", "qtdAlunos": 2, "alunos": [1, 2], "posts": [1, 2], "desafios": [1] },
+      { "id": 2, "nome": "Grupo2", "qtdAlunos": 2, "alunos": [1, 2], "posts": [1, 2], "desafios": [1, 2] }
+    ],
+    "posts": [
+      { "id": 1, "grupo": 1, "professorAluno": true, "aluno": 1, "professor": 2, "texto": "Texto do post 1" },
+      { "id": 2, "grupo": 2, "professorAluno": false, "aluno": 2, "professor": 1, "texto": "Texto do post 2" }
+    ],
+    "desafios": [
+      { "id": 1, "nome": "Desafio1", "texto": "Texto do desafio 1", "grupo": 1, "professor": 2 },
+      { "id": 2, "nome": "Desafio2", "texto": "Texto do desafio 2", "grupo": 2, "professor": 1 }
+    ]
+  }
+  
