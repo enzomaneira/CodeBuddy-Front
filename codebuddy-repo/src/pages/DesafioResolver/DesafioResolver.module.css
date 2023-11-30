@@ -1,0 +1,67 @@
+/* DesafioResolver.module.css */
+
+.desafioResolver {
+  display: flex;
+  position: relative;
+  height: 100vh; 
+}
+
+.exercicioTexto {
+  padding: 2% 1% 1% 1%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+
+.textareaContainer {
+  flex: 1;
+  background-color: #001f3f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 30%; /* Largura da parte esquerda */
+  width: 70%; /* Largura da parte direita */
+  height: 100%; /* 100% da altura */
+  z-index: 1;
+}
+.grupo,
+.desafio,
+.textoDesafio {
+  font-size: 1em;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.grupo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.desafio {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.textoDesafio {
+  font-size: 1em;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.editorTexto {
+  width: 890%;
+  height: 100%;
+  background: #001f3f;
+  color: #fff;
+  font-size: 2em;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 2;
+  border-radius: 0;
+}

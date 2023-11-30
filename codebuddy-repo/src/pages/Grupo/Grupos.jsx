@@ -49,7 +49,7 @@ const Grupos = () => {
           placeholder="Buscar Grupo"
         />
       </div>
-      <div>
+      <div>0
         {console.log('Rendering Grupos component')}
         {user && user.grupos ? (
           <div>

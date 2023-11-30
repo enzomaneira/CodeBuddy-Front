@@ -1,4 +1,4 @@
-/* NavbarDesafio.module.css */
+
 .navbarDesafio {
     background-color: black;
     border-top-left-radius: 25px;
@@ -20,7 +20,6 @@
     text-transform: capitalize;
     padding-left: 1%;
     padding-top: 1%;
-    margin-right: 75%;
     display: block;
   }
   
