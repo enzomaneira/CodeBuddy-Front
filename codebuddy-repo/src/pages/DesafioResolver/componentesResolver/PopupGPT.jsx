@@ -20,6 +20,9 @@ const PopupGPT = ({ onClose }) => {
 
   return (
     <div className={styles.popup}>
+      <button className={styles.closeButton} onClick={handleFechar}>X</button>
+      
+
       <div className={styles.textoSuperior}>
         <textarea
           placeholder="Digite aqui..."
@@ -31,7 +34,6 @@ const PopupGPT = ({ onClose }) => {
         <div className={styles.respostaTexto}>{resposta}</div>
       </div>
       <div className={styles.botoes}>
-        <button onClick={handleFechar}>X</button>
         <button onClick={handleEnviarResposta}>Enviar</button>
       </div>
     </div>

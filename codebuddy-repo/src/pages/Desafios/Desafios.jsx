@@ -50,7 +50,9 @@ const Desafios = () => {
             </div>
           ))}
         </div>
+        <Link to={`/Desafios/${encodeURIComponent(grupoNome)}/CriarDesafio`}>
         <BotaoCriarPost/>
+        </Link>
       </ContainerG>
     </div>
   );

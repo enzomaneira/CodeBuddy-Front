@@ -1,0 +1,35 @@
+/* NavbarCriarDesafio.module.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 25px;
+    border-radius: 25px 25px 0 0; 
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .navbar span {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 10px; /* Adiciona um espaço à esquerda */
+  }
+  
+  .img {
+    margin-left: auto;
+  }
+  
+  .img img {
+    width: 24px;
+    height: auto;
+    padding-top: 10%;
+    margin-left: 5px; /* Ajuste conforme necessário para dar espaço à esquerda */
+  }

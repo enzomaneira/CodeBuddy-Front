@@ -17,6 +17,8 @@ import GrupoDetails from './pages/GrupoDetails/GrupoDetails.jsx'
 import Desafios from './pages/Desafios/Desafios.jsx'
 import DesafioDetails from './pages/DesafioDetails/DesafioDetails.jsx'
 import DesafioResolver from './pages/DesafioResolver/DesafioResolver.jsx'
+import CriarDesafio from './pages/CriarDesafio/CriarDesafio.jsx'
+
 
 
 
@@ -52,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/Desafios/:grupoNome",
     element: <Desafios/>
+  },
+  {
+    path: "/Desafios/:grupoNome/CriarDesafio",
+    element: <CriarDesafio/>
   },
   {
     path: "/Desafios/:grupoNome/:desafioNome",
