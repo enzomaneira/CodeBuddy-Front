@@ -54,7 +54,6 @@ const DesafioDetails = () => {
       {desafio && (
         <ContainerG style={{ backgroundColor: "orange" }}>
           <NavbarDesafio/>
-
           <div className={styles.desafioContent}>
             <h2>{desafio.nome}</h2>
             <p>{desafio.texto}</p>

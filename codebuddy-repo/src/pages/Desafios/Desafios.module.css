@@ -22,8 +22,8 @@
     width: 20%;
     padding: 1%;
     margin-top: 5%;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 15%;
+    margin-left: 15%;
     background-color: white;
     
   }
@@ -35,12 +35,15 @@
   
 .img {
     position: absolute;
+    margin-left: auto;
     top: 3%;
     right: 4%;
     cursor: pointer;
   }
   
   .img img {
-    width: 40px; 
+    width: 33px;
+    height: auto; 
+    margin-left: 5px;
   }
   

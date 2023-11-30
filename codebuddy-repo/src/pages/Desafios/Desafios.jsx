@@ -4,6 +4,7 @@ import ContainerG from "../../components/container/ContainerG";
 import Navbar from "../../components/Navbar";
 import styles from "./Desafios.module.css";
 import backarrow from "../../img/backarrow.png";
+import BotaoCriarPost from "../GrupoDetails/componentsGrupo/BotaoCriarPost";
 
 const Desafios = () => {
   const { grupoNome } = useParams();
@@ -49,6 +50,7 @@ const Desafios = () => {
             </div>
           ))}
         </div>
+        <BotaoCriarPost/>
       </ContainerG>
     </div>
   );

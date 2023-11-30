@@ -8,6 +8,7 @@ import styles from "./GrupoDetails.module.css";
 import Posts from "./posts/Posts";
 import nextleft from "../../img/nextleft.png";
 import nextright from "../../img/nextright.png";
+import BotaoCriarPost from "./componentsGrupo/BotaoCriarPost";
 
 const GrupoDetails = () => {
   const { nome } = useParams();
@@ -18,11 +19,12 @@ const GrupoDetails = () => {
       <ContainerG style={{ backgroundColor: "#4565B7" }}>
         <NavbarGrupo />
         <div className={styles.postsContainer}>
-        <div className={styles.postsWrapper}>
-          <Posts groupName={nome} />
-          <Posts groupName={nome} />
+          <div className={styles.postsWrapper}>
+            <Posts groupName={nome} />
+            <Posts groupName={nome} />
+          </div>
         </div>
-        </div>
+        <BotaoCriarPost />
         <div className={styles.bottomImagesContainer}>
           <img src={nextright} alt="nextright" className={`${styles.bottomImage} ${styles.inverted}`} />
           <img src={nextleft} alt="nextleft" className={styles.bottomImage} />

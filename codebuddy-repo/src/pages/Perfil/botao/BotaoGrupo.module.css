@@ -1,18 +1,18 @@
 /* BotaoGrupo.module.css */
 .link {
     text-decoration: none;
-    color: white; /* Adicione esta linha para definir a cor do texto como branco */
+    color: white; 
     width: 50%;
     height: 200px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 23%;
   }
   
   .container {
     background-color: #B5C033;
     border-radius: 25px;
-    width: 60%;
+    width: 50%;
     font-size: 60px;
     font-family: bold;
     font-style: normal;

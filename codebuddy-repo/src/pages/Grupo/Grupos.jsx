@@ -13,7 +13,7 @@ const Grupos = () => {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
-        const currentUser = data.find(user => user.id === 3);
+        const currentUser = data.find(user => user.id === 1);
         setUser(currentUser);
         console.log(currentUser);
       })
@@ -49,7 +49,7 @@ const Grupos = () => {
           placeholder="Buscar Grupo"
         />
       </div>
-      <div>0
+      <div>
         {console.log('Rendering Grupos component')}
         {user && user.grupos ? (
           <div>
