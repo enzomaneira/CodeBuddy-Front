@@ -55,7 +55,7 @@
 }
 
 .editorTexto {
-  width: 890%;
+  width: 533%;
   height: 100%;
   background: #001f3f;
   color: #fff;
@@ -64,4 +64,13 @@
   box-sizing: border-box;
   z-index: 2;
   border-radius: 0;
+}
+
+.botoesContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 8px;
+  margin: 16px;
 }

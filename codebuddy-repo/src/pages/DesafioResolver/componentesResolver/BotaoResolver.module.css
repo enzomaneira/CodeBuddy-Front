@@ -1,0 +1,14 @@
+.botaoResolver {
+    width: 40%;
+    height: 100%;
+    background: white;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .imagemBotao {
+    width: 90%;
+    height: 90%;
+  }
+  

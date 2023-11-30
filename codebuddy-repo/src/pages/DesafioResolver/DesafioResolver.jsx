@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./DesafioResolver.module.css";
+import send from "../../img/sendResolver.png" 
+import back from "../../img/backResolver.png"
+import gpt from "../../img/gpt.png"
+import BotaoResolver from "./componentesResolver/BotaoResolver";
 
 const DesafioResolver = () => {
   const { grupoNome, desafioNome } = useParams();
+  const navigateTo = useNavigate();
 
-  // Função para obter o estado do localStorage
   const getSavedState = () => {
     const savedState = localStorage.getItem("desafioState");
     return savedState ? JSON.parse(savedState) : null;
   };
 
-  // Função para salvar o estado no localStorage
   const saveState = (state) => {
     localStorage.setItem("desafioState", JSON.stringify(state));
   };
@@ -62,6 +65,10 @@ const DesafioResolver = () => {
     fetchDesafio();
   }, [grupoNome, desafioNome]);
 
+  const handleVoltarClick = () => {
+    navigateTo(`/Desafios/${encodeURIComponent(grupoNome)}/${encodeURIComponent(desafioNome)}`);
+  };
+
   return (
     <div className={styles.desafioResolver}>
       <div className={styles.exercicioTexto}>
@@ -75,6 +82,11 @@ const DesafioResolver = () => {
       </div>
       <div>
         <textarea className={styles.editorTexto} placeholder="Digite aqui..." />
+      </div>
+      <div className={styles.botoesContainer}>
+        <BotaoResolver imagemSrc={send} />
+        <BotaoResolver imagemSrc={back} onClick={handleVoltarClick} />
+        <BotaoResolver imagemSrc={gpt} />
       </div>
     </div>
   );
