@@ -1,5 +1,4 @@
-// GrupoDetails.jsx
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import NavbarGrupo from "./componentsGrupo/NavbarGrupo";
@@ -9,9 +8,25 @@ import Posts from "./posts/Posts";
 import nextleft from "../../img/nextleft.png";
 import nextright from "../../img/nextright.png";
 import BotaoCriarPost from "./componentsGrupo/BotaoCriarPost";
+import PopupComponent from "./componentsGrupo/PopupComponent"; 
 
 const GrupoDetails = () => {
   const { nome } = useParams();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleSendPost = (text) => {
+    console.log("Botão Criar Post clicado");
+    console.log("Enviando post:", text);
+
+  };
+
+  const handleCreatePost = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
 
   return (
     <div>
@@ -24,7 +39,10 @@ const GrupoDetails = () => {
             <Posts groupName={nome} />
           </div>
         </div>
-        <BotaoCriarPost />
+        <BotaoCriarPost onClick={handleCreatePost} />
+        {isPopupOpen && (
+          <PopupComponent onClose={handleClosePopup} onSend={handleSendPost} />
+        )}
         <div className={styles.bottomImagesContainer}>
           <img src={nextright} alt="nextright" className={`${styles.bottomImage} ${styles.inverted}`} />
           <img src={nextleft} alt="nextleft" className={styles.bottomImage} />

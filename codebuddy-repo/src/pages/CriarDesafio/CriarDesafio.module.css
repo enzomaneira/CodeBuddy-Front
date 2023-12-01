@@ -46,7 +46,7 @@
   .selectDesafio {
     margin-bottom: 10px;
     padding: 8px;
-    width: 100%; /* Alterado para 100% para ocupar a largura do container */
+    width: 300%; /* Alterado para 100% para ocupar a largura do container */
   }
   
   .buttonDesafio {
