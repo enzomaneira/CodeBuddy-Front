@@ -1,4 +1,4 @@
-
+/* Atualize o CSS do PopupComponent.module.css */
 .popup {
     position: fixed;
     top: 50%;
@@ -8,23 +8,26 @@
     border: 1px solid #ccc;
     padding: 20px;
     z-index: 999;
-    max-width: 300px;
+    max-width: 500px; /* Ajuste o valor conforme necessário para aumentar o tamanho */
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .textarea {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.textarea {
+    width: calc(100% - 20px); /* Ajuste conforme necessário para dar espaço para a borda */
     height: 100px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  
-  .sendButton {
+}
+
+.sendButton {
     padding: 10px;
     border: none;
     background-color: #0074d9;
@@ -32,14 +35,31 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
-  }
-  
-  .closeButton {
-    align-self: flex-end;
+    width: 20%;
+    align-self: flex-end; /* Alinhar o botão de envio à direita */
+}
+
+.closeButtonContainer {
+    align-self: flex-start; /* Alinhar o container do botão "X" à esquerda */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Ajuste conforme necessário para o espaçamento desejado da borda direita */
+}
+
+.closeButton {
+    width: 5%;
     margin-bottom: 10px;
-  }
-  
-  .sendButton:hover {
-    background-color: #0056b3;
-  }
-  
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red; /* Cor de fundo do botão X */
+    color: white; /* Cor do texto do botão X */
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.closeButton:hover {
+    background-color: darkred; /* Cor de fundo do botão X ao passar o mouse */
+}

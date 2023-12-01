@@ -7,7 +7,6 @@ import styles from "./GrupoDetails.module.css";
 import Posts from "./posts/Posts";
 import nextleft from "../../img/nextleft.png";
 import nextright from "../../img/nextright.png";
-import BotaoCriarPost from "./componentsGrupo/BotaoCriarPost";
 import PopupComponent from "./componentsGrupo/PopupComponent"; 
 
 const GrupoDetails = () => {
@@ -17,10 +16,10 @@ const GrupoDetails = () => {
   const handleSendPost = (text) => {
     console.log("Botão Criar Post clicado");
     console.log("Enviando post:", text);
-
   };
 
   const handleCreatePost = () => {
+    console.log("Botão Criar Post clicado");
     setIsPopupOpen(true);
   };
 
@@ -39,7 +38,10 @@ const GrupoDetails = () => {
             <Posts groupName={nome} />
           </div>
         </div>
-        <BotaoCriarPost onClick={handleCreatePost} />
+        {/* Botão com popup integrado */}
+        <div className={styles.botaoCriarPostIntegrated} onClick={handleCreatePost}>
+          <div className={styles.text}>+</div>
+        </div>
         {isPopupOpen && (
           <PopupComponent onClose={handleClosePopup} onSend={handleSendPost} />
         )}

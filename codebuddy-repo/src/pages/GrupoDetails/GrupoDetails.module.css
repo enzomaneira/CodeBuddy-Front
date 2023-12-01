@@ -22,3 +22,23 @@
   .inverted {
     transform: scaleX(-1);
   }
+
+ /* Adicione ao seu arquivo GrupoDetails.module.css */
+.botaoCriarPostIntegrated {
+  width: 51px;
+  height: 42px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000; /* Adição da cor ao estilo */
+  z-index: 1;
+}

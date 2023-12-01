@@ -11,15 +11,16 @@ const PopupComponent = ({ onClose, onSend }) => {
   };
 
   const handleSend = () => {
+
     onSend(text);
     handleClose(); 
   };
 
   return (
     <div className={styles.popup}>
-      <button className={styles.closeButton} onClick={handleClose}>
+      <div className={styles.closeButton} onClick={handleClose}>
         X
-      </button>
+      </div>
       <textarea
         placeholder="Digite aqui..."
         value={text}
