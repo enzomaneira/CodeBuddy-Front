@@ -12,6 +12,9 @@ const NavbarGrupo = () => {
       <Link to={`/Desafios/${encodeURIComponent(nome)}`}>
         <div className={styles.text}>Desafios</div>
       </Link>
+      <Link to={`/listaAlunos/${encodeURIComponent(nome)}`}>
+              <div className={styles.text}>Alunos</div>
+       </Link>
       <div className={styles.img}>
         <Link to="/profile" className={styles.link}>
           <img src={backarrow} alt="Back Arrow" />

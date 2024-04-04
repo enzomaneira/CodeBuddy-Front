@@ -38,7 +38,6 @@ const GrupoDetails = () => {
             <Posts groupName={nome} />
           </div>
         </div>
-        {/* Botão com popup integrado */}
         <div className={styles.botaoCriarPostIntegrated} onClick={handleCreatePost}>
           <div className={styles.text}>+</div>
         </div>

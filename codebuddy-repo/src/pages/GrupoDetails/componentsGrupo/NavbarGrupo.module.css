@@ -34,7 +34,8 @@
     line-height: normal;
     text-transform: capitalize;
     padding-top: 1%;
-    display: block;
+    display: inline-block;
+    margin-right: 20px;
   }
   
   .img {
