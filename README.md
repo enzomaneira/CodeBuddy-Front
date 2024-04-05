@@ -13,27 +13,33 @@ Certifique-se de ter o Node.js e npm instalados em sua máquina.
 ```bash
 git clone https://github.com/seu-usuario/codebuddy-repo.git
 cd codebuddy-repo
+```bash
 
 #### Passo 2: Instale as dependências
 ```bash
 npm install
+```bash
 
 #### Passo 3: Instale o JSON Server
 O JSON Server é uma dependência de desenvolvimento que simula uma API REST. Você pode instalá-lo globalmente ou localmente no projeto. Vamos instalar localmente neste caso.
 ```bash
 npm install json-server
+```bash
 
 #### Passo 4: Inicie o servidor JSON
 
 Execute o seguinte comando para iniciar o servidor JSON:
 ```bash
 json-server --watch db.json --port 3000
+```bash
 
 Isso iniciará o servidor JSON na porta 3000 e usará o arquivo db.json para os dados.
 
 #### Passo 5: Inicie o servidor de desenvolvimento
+
 Abra outro terminal na pasta do projeto e execute o comando abaixo para iniciar o servidor de desenvolvimento com Vite:
 ```bash
 npm run dev
+```bash
 
 Isso iniciará o servidor de desenvolvimento Vite
