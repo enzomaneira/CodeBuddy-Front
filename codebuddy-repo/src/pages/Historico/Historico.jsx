@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import NavbarGrupo from "../GrupoDetails/componentsGrupo/NavbarGrupo";
 import ContainerG from "../../components/container/ContainerG";
-import styles from "./ListaAlunos.module.css";
-import { Link } from "react-router-dom";
+import styles from "./Historico.module.css";
 
-const ListaAlunos = () => {
+const Historico = () => {
   const { grupoNome } = useParams();
   const [alunosDoGrupo, setAlunosDoGrupo] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -48,7 +47,7 @@ const ListaAlunos = () => {
           ) : alunosDoGrupo.length > 0 ? (
             alunosDoGrupo.map((alunoNome, index) => (
               <div key={index} className={styles.alunoItem}>
-                <Link to="/Historico">{alunoNome}</Link>
+                <span>{alunoNome}</span>
               </div>
             ))
           ) : (
@@ -60,4 +59,4 @@ const ListaAlunos = () => {
   );
 };
 
-export default ListaAlunos;
+export default Historico;

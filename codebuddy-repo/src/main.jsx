@@ -19,7 +19,7 @@ import DesafioDetails from './pages/DesafioDetails/DesafioDetails.jsx'
 import DesafioResolver from './pages/DesafioResolver/DesafioResolver.jsx'
 import CriarDesafio from './pages/CriarDesafio/CriarDesafio.jsx'
 import ListaAlunos from "./pages/ListaAlunos/ListaAlunos.jsx"
-
+import Historico from "./pages/Historico/Historico.jsx"
 
 
 
@@ -71,7 +71,11 @@ const router = createBrowserRouter([
   {
       path: "/listaAlunos/:grupoNome",
       element: <ListaAlunos/>
-    }
+    },
+  {
+      path: "/Historico",
+      element: <Historico/>
+  }
   
 ])
 
