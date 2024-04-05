@@ -30,7 +30,7 @@ npm install json-server
 
 Execute o seguinte comando para iniciar o servidor JSON:
 ```bash
-json-server --watch db.json --port 3000
+npx json-server --watch db.json --port 3000
 ```
 Resultado esperado: 
 ```bash
