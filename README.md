@@ -32,6 +32,22 @@ Execute o seguinte comando para iniciar o servidor JSON:
 ```bash
 json-server --watch db.json --port 3000
 ```
+Resultado esperado: 
+```bash
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:3000/users
+  http://localhost:3000/grupos
+  http://localhost:3000/posts
+  http://localhost:3000/Desafios
+
+  Home
+  http://localhost:3000
+```
 
 Isso iniciará o servidor JSON na porta 3000 e usará o arquivo db.json para os dados.
 
@@ -42,4 +58,18 @@ Abra outro terminal na pasta do projeto e execute o comando abaixo para iniciar 
 npm run dev
 ```
 
-Isso iniciará o servidor de desenvolvimento Vite
+Isso iniciará o servidor de desenvolvimento Vite.
+
+Resultado esperado:
+
+```bash
+> codebuddy-repo@0.0.0 dev
+> vite
+
+
+  VITE v4.5.0  ready in 194 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+```
