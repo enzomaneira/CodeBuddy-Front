@@ -17,7 +17,7 @@ const Profile = () => {
       .then(response => response.json())
       .then(data => {
         setUsers(data);
-        const currentUser = data.find(user => user.id === 1);
+        const currentUser = data.find(user => user.id === 2);
         setCurrentUser(currentUser);
       })
       .catch(error => console.error('Error fetching users:', error));
