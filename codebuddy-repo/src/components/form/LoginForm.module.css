@@ -19,7 +19,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+
   .button {
     background-color: #0F1234;
     color: #fff;
@@ -29,4 +29,7 @@
     cursor: pointer;
   }
   
+  .radioLabel {
+    width: 10%;
+  }
   
