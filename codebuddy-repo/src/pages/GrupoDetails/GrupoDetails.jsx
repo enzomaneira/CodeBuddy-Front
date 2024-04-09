@@ -11,7 +11,7 @@ import PopupComponent from "./componentsGrupo/PopupComponent";
 import { usePosts } from "./posts/PostsProvider";
 
 const GrupoDetails = () => {
-  const { nome } = useParams(); // Usar nome ao invés de id, se o parâmetro na rota for nome
+  const { nome } = useParams()
   const { posts, setPosts } = usePosts();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const GrupoDetails = () => {
     };
 
     fetchPosts();
-  }, [nome, setPosts]); // Adicionar nome como dependência do useEffect
+  }, [nome, setPosts]);
 
   const handleCreatePost = () => {
     setIsPopupOpen(true);
