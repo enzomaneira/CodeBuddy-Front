@@ -13,7 +13,7 @@ const Historico = () => {
   useEffect(() => {
     const fetchAluno = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/users?id=${encodeURIComponent(alunoId)}`);
+        const response = await fetch(`http://localhost:3000/alunos?id=${encodeURIComponent(alunoId)}`);
         const alunoData = await response.json();
         setAluno(alunoData[0] || null);
         setLoading(false);
@@ -48,7 +48,7 @@ const Historico = () => {
               </div>
             </div>
           ) : (
-            <p>Nenhuma informacao sobre este aluno disponivel.</p>
+            <p>Nenhuma informação sobre este aluno disponível.</p>
           )}
         </div>
       </ContainerG>

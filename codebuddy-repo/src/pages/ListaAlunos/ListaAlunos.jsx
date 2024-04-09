@@ -18,7 +18,7 @@ const ListaAlunos = () => {
         const grupo = data[0];
         if (grupo) {
           const alunosNomes = await Promise.all(grupo.alunoId.map(async alunoId => {
-            const responseAluno = await fetch(`http://localhost:3000/users/${alunoId}`);
+            const responseAluno = await fetch(`http://localhost:3000/alunos/${alunoId}`);
             const alunoData = await responseAluno.json();
             return { id: alunoId, nome: alunoData.nome }; // Retorna um objeto com id e nome do aluno
           }));
@@ -51,7 +51,7 @@ const ListaAlunos = () => {
               </div>
             ))
           ) : (
-            <p></p>
+            <p>Nenhum aluno encontrado.</p>
           )}
         </div>
       </ContainerG>

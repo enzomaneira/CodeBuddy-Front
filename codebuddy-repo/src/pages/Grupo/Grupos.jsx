@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import ContainerP from "../../components/container/ContainerP";
@@ -7,28 +6,28 @@ import TextContainer from "../../components/container/TextContainer";
 import { Link } from "react-router-dom";
 
 const Grupos = () => {
-  const [user, setUser] = useState(null);
+  const [aluno, setAluno] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:3000/alunos')
       .then(response => response.json())
       .then(data => {
-        const currentUser = data.find(user => user.id === 2);
-        setUser(currentUser);
+        const currentUser = data.find(aluno => aluno.id === 1);
+        setAluno(currentUser);
         console.log(currentUser);
       })
-      .catch(error => console.error('Error fetching users:', error));
+      .catch(error => console.error('Error fetching students:', error));
   }, []);
 
   const renderGroups = () => {
-    if (user && user.qtdgrupos > 0) {
+    if (aluno && aluno.qtdgrupos > 0) {
       return (
         <div className={styles.groupsGrid}>
-          {user.grupos.map((grupo, index) => (
+          {aluno.grupos.map((grupo, index) => (
             <div key={index} className={styles.groupContainer}>
-            <Link key={index} to={`/Grupo/${encodeURIComponent(grupo)}`} className={styles.groupLink}>
-              <TextContainer texto={`${grupo}`} />
-            </Link>
+              <Link key={index} to={`/Grupo/${encodeURIComponent(grupo)}`} className={styles.groupLink}>
+                <TextContainer texto={`${grupo}`} />
+              </Link>
             </div>
           ))}
         </div>
@@ -51,7 +50,7 @@ const Grupos = () => {
       </div>
       <div>
         {console.log('Rendering Grupos component')}
-        {user && user.grupos ? (
+        {aluno && aluno.grupos ? (
           <div>
             {renderGroups()}
           </div>

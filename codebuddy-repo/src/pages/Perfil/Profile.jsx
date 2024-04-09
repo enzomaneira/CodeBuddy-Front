@@ -9,18 +9,18 @@ import BotaoCriarGrupo from "../CriarGrupo/botao/BotaoCriarGrupo";
 import { Link } from "react-router-dom";
 
 const Profile = () => {
-  const [users, setUsers] = useState([]);
+  const [alunos, setAlunos] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/users')
+    fetch('http://localhost:3000/alunos')
       .then(response => response.json())
       .then(data => {
-        setUsers(data);
-        const currentUser = data.find(user => user.id === 2);
+        setAlunos(data);
+        const currentUser = data.find(aluno => aluno.id === 1);
         setCurrentUser(currentUser);
       })
-      .catch(error => console.error('Error fetching users:', error));
+      .catch(error => console.error('Error fetching students:', error));
   }, []);
 
   return (

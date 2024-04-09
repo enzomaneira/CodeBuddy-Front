@@ -1,145 +1,365 @@
 {
-  "users": [
-      {
-          "id": 1, 
-          "nome": "maneira",
-          "password": "senha123",
-          "qtdgrupos": 3,
-          "grupos": ["estrutura de dados", "lab de prog", "metodos formais"]
-      },
-      {
-          "id": 2,
-          "nome": "jonga",
-          "password": "senha111",
-          "qtdgrupos": 3,
-          "grupos": ["estrutura de dados", "engenharia de software", "metodos formais"]
-      },
-      {
-          "id": 3,
-          "nome": "tefinho",
-          "password": "senha000",
-          "qtdgrupos": 3, 
-          "grupos": ["estrutura de dados", "lab de prog", "física"]
-      }
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Michelle",
+      "password": "senha123",
+      "qtdgrupos": 3,
+      "grupos": [
+        "Estrutura de Dados",
+        "Lab de Programação",
+        "Métodos Formais"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Lucas",
+      "password": "abc123",
+      "qtdgrupos": 2,
+      "grupos": [
+        "Lab de Programação",
+        "Inteligência Artificial"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Ana",
+      "password": "qwerty",
+      "qtdgrupos": 1,
+      "grupos": [
+        "Banco de Dados"
+      ]
+    }
+  ],
+  "professores": [
+    {
+      "id": 1,
+      "nome": "João",
+      "password": "prof123",
+      "qtdgrupos": 3,
+      "grupos": [
+        "Estrutura de Dados",
+        "Lab de Programação",
+        "Métodos Formais"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Maria",
+      "password": "teacher456",
+      "qtdgrupos": 2,
+      "grupos": [
+        "Lab de Programação",
+        "Sistemas Distribuídos"
+      ]
+    }
   ],
   "grupos": [
     {
       "id": 1,
-      "nome": "estrutura de dados",
-      "alunoId": [1, 2, 3],
-      "descrição": "bla bla bla",
-      "posts": [1, 2, 3]
+      "nome": "Estrutura de Dados",
+      "alunoId": [
+        1,
+        2,
+        3
+      ],
+      "administrador": 1,
+      "descricao": "Grupo dedicado ao estudo de estrutura de dados.",
+      "posts": [
+        {
+          "id": 1,
+          "texto": "Discussão sobre algoritmos de ordenação.",
+          "user": 1,
+          "comentarios": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": 2,
+          "texto": "Compartilhando recursos sobre árvores binárias.",
+          "user": 2,
+          "comentarios": []
+        },
+        {
+          "id": 3,
+          "texto": "Dúvidas sobre grafos direcionados.",
+          "user": 3,
+          "comentarios": []
+        }
+      ],
+      "desafios": [
+        {
+          "id": 1,
+          "nome": "Soma de Pares",
+          "texto": "Escreva um programa que calcule a soma dos números pares de 1 a 100.",
+          "respostas": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Árvores Binárias",
+          "texto": "Desenvolva um algoritmo para percorrer árvores binárias em pré-ordem.",
+          "respostas": []
+        }
+      ]
     },
     {
       "id": 2,
-      "nome": "lab de prog",
-      "alunoId": [1, 3],
-      "descrição": "bla bla bla",
-      "posts": [4, 5, 6]
+      "nome": "Lab de Programação",
+      "alunoId": [
+        1,
+        2
+      ],
+      "administrador": 1,
+      "descricao": "Grupo de prática em programação.",
+      "posts": [
+        {
+          "id": 4,
+          "texto": "Exercício prático de loops em Python.",
+          "user": 1,
+          "comentarios": [
+            3
+          ]
+        },
+        {
+          "id": 5,
+          "texto": "Discussão sobre programação orientada a objetos.",
+          "user": 2,
+          "comentarios": []
+        }
+      ],
+      "desafios": [
+        {
+          "id": 3,
+          "nome": "Automatos Finitos",
+          "texto": "Descreva um autômato finito determinístico para reconhecer palavras binárias com número par de 1's.",
+          "respostas": []
+        }
+      ]
     },
     {
       "id": 3,
-      "nome": "metodos formais",
-      "alunoId": [1, 2],
-      "descrição": "bla bla bla",
-      "posts": [7, 8, 9]
+      "nome": "Métodos Formais",
+      "alunoId": [
+        1
+      ],
+      "administrador": 1,
+      "descricao": "Grupo focado em métodos formais de desenvolvimento de software.",
+      "posts": [
+        {
+          "id": 6,
+          "texto": "Apresentação de trabalhos sobre autômatos finitos.",
+          "user": 1,
+          "comentarios": []
+        }
+      ],
+      "desafios": []
     },
     {
       "id": 4,
-      "nome": "física",
-      "alunoId": [3],
-      "descrição": "bla bla bla",
-      "posts": [10, 11, 12]
+      "nome": "Inteligência Artificial",
+      "alunoId": [
+        2
+      ],
+      "administrador": 2,
+      "descricao": "Grupo de estudo em IA.",
+      "posts": [
+        {
+          "id": 7,
+          "texto": "Discussão sobre redes neurais artificiais.",
+          "user": 2,
+          "comentarios": []
+        }
+      ],
+      "desafios": [
+        {
+          "id": 4,
+          "nome": "Redes Neurais",
+          "texto": "Pesquise sobre redes neurais profundas e apresente um resumo para discussão.",
+          "respostas": []
+        }
+      ]
     },
     {
       "id": 5,
-      "nome": "engenharia de software",
-      "alunoId": [2],
-      "descrição": "bla bla bla",
-      "posts": [1, 2, 3]
+      "nome": "Banco de Dados",
+      "alunoId": [
+        3
+      ],
+      "administrador": 3,
+      "descricao": "Grupo de estudo em bancos de dados.",
+      "posts": [],
+      "desafios": []
+    },
+    {
+      "id": 6,
+      "nome": "Sistemas Distribuídos",
+      "alunoId": [],
+      "administrador": 2,
+      "descricao": "Grupo dedicado a sistemas distribuídos.",
+      "posts": [],
+      "desafios": [
+        {
+          "id": 11,
+          "nome": "Estudar protocolos de comunicação",
+          "texto": "Leitura e compreensão de protocolos de comunicação em sistemas distribuídos.",
+          "respostas": []
+        },
+        {
+          "id": 12,
+          "nome": "Implementar sistemas distribuídos",
+          "texto": "Desenvolvimento e teste de sistemas distribuídos em ambiente simulado.",
+          "respostas": []
+        }
+      ]
     }
   ],
   "posts": [
     {
       "id": 1,
       "grupo": 1,
-      "texto": "bla bla bla 1",
-      "user": 1
+      "texto": "Discussão sobre algoritmos de ordenação.",
+      "user": 1,
+      "comentarios": [
+        1,
+        2
+      ]
     },
     {
       "id": 2,
       "grupo": 1,
-      "texto": "bla bla bla 2",
-      "user": 2
+      "texto": "Compartilhando recursos sobre árvores binárias.",
+      "user": 2,
+      "comentarios": []
     },
     {
       "id": 3,
       "grupo": 1,
-      "texto": "bla bla bla 3",
-      "user": 1
+      "texto": "Dúvidas sobre grafos direcionados.",
+      "user": 3,
+      "comentarios": []
+    },
+    {
+      "id": 4,
+      "grupo": 2,
+      "texto": "Exercício prático de loops em Python.",
+      "user": 1,
+      "comentarios": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "grupo": 2,
+      "texto": "Discussão sobre programação orientada a objetos.",
+      "user": 2,
+      "comentarios": []
+    },
+    {
+      "id": 6,
+      "grupo": 3,
+      "texto": "Apresentação de trabalhos sobre autômatos finitos.",
+      "user": 1,
+      "comentarios": []
+    },
+    {
+      "id": 7,
+      "grupo": 4,
+      "texto": "Discussão sobre redes neurais artificiais.",
+      "user": 2,
+      "comentarios": []
     }
   ],
-  "Desafios": [
+  "comentarios": [
     {
-        "id": 1,
-        "nome": "Soma de Pares",
-        "texto": "Escreva um programa que calcule a soma dos números pares de 1 a 100. Você pode utilizar um loop para percorrer os números e somar apenas os pares.",
-        "grupoId": 1
+      "id": 1,
+      "post": 1,
+      "texto": "Concordo, algoritmos de ordenação são fundamentais.",
+      "user": 2
     },
     {
-        "id": 2,
-        "nome": "Fibonacci",
-        "texto": "Implemente uma função para calcular o n-ésimo termo da sequência de Fibonacci. A sequência inicia com 0 e 1, e cada termo subsequente é a soma dos dois anteriores.",
-        "grupoId": 1
+      "id": 2,
+      "post": 1,
+      "texto": "Podemos discutir mais sobre quicksort?",
+      "user": 3
     },
     {
-        "id": 3,
-        "nome": "Bubble Sort",
-        "texto": "Crie um algoritmo de ordenação usando o método Bubble Sort. Este algoritmo compara pares de elementos adjacentes e os troca se estiverem na ordem errada, repetindo esse processo até que a lista esteja ordenada.",
-        "grupoId": 2
-    },
-    {
-        "id": 4,
-        "nome": "Busca Binária",
-        "texto": "Desenvolva um programa que realize busca binária em uma lista ordenada. A busca binária é um método eficiente que divide a lista pela metade a cada iteração, reduzindo o espaço de busca pela metade a cada passo.",
-        "grupoId": 2
-    },
-    {
-        "id": 5,
-        "nome": "Recursividade",
-        "texto": "Elabore uma função recursiva para calcular o fatorial de um número. O fatorial de um número n é o produto de todos os inteiros de 1 a n. Utilize a recursividade para resolver este problema de forma elegante.",
-        "grupoId": 3
-    },
-    {
-        "id": 6,
-        "nome": "Média Ponderada",
-        "texto": "Crie um programa que calcule a média ponderada de três notas. A média ponderada leva em consideração pesos diferentes para cada nota. Por exemplo, se as notas são A, B e C com pesos 2, 3 e 4, respectivamente, a média ponderada é calculada como (A*2 + B*3 + C*4) / (2 + 3 + 4).",
-        "grupoId": 3
-    },
-    {
-        "id": 7,
-        "nome": "Soma de Matrizes",
-        "texto": "Implemente uma função para somar duas matrizes. Lembre-se de verificar se as dimensões das matrizes são compatíveis para a operação de soma (mesmo número de linhas e colunas).",
-        "grupoId": 4
-    },
-    {
-        "id": 8,
-        "nome": "Validação de CPF",
-        "texto": "Desenvolva uma função que valide se um CPF é válido. Considere as regras de validação do CPF, como a fórmula de cálculo dos dígitos verificadores.",
-        "grupoId": 4
-    },
-    {
-        "id": 9,
-        "nome": "Árvore Binária",
-        "texto": "Construa uma estrutura de dados de árvore binária e implemente suas operações básicas, como inserção, remoção e busca. Utilize a estrutura de árvore binária para organizar dados de forma hierárquica.",
-        "grupoId": 5
-    },
-    {
-        "id": 10,
-        "nome": "Ordenação QuickSort",
-        "texto": "Crie um algoritmo de ordenação usando o método QuickSort. O QuickSort é um algoritmo de ordenação eficiente que utiliza a estratégia de divisão e conquista para ordenar uma lista.",
-        "grupoId": 5
+      "id": 3,
+      "post": 4,
+      "texto": "Como você resolveu o exercício dos loops?",
+      "user": 2
     }
-]
-
+  ],
+  "desafios": [
+    {
+      "id": 1,
+      "nome": "Soma de Pares",
+      "texto": "Escreva um programa que calcule a soma dos números pares de 1 a 100.",
+      "grupoId": 1,
+      "respostas": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Árvores Binárias",
+      "texto": "Desenvolva um algoritmo para percorrer árvores binárias em pré-ordem.",
+      "grupoId": 2,
+      "respostas": []
+    },
+    {
+      "id": 3,
+      "nome": "Automatos Finitos",
+      "texto": "Descreva um autômato finito determinístico para reconhecer palavras binárias com número par de 1's.",
+      "grupoId": 3,
+      "respostas": []
+    },
+    {
+      "id": 4,
+      "nome": "Redes Neurais",
+      "texto": "Pesquise sobre redes neurais profundas e apresente um resumo para discussão.",
+      "grupoId": 4,
+      "respostas": []
+    },
+    {
+      "id": 11,
+      "nome": "Estudar protocolos de comunicação",
+      "texto": "Leitura e compreensão de protocolos de comunicação em sistemas distribuídos.",
+      "grupoId": 6,
+      "respostas": []
+    },
+    {
+      "id": 12,
+      "nome": "Implementar sistemas distribuídos",
+      "texto": "Desenvolvimento e teste de sistemas distribuídos em ambiente simulado.",
+      "grupoId": 6,
+      "respostas": []
+    }
+  ],
+  "respostas": [
+    {
+      "id": 1,
+      "aluno": 1,
+      "texto": "A soma dos números pares de 1 a 100 é 2550.",
+      "desafiop": 1
+    },
+    {
+      "id": 2,
+      "aluno": 2,
+      "texto": "Segue a solução em Python:\n\nsoma = 0\nfor i in range(1, 101):\n    if i % 2 == 0:\n        soma += i\nprint(soma)",
+      "desafiop": 1
+    },
+    {
+      "id": 3,
+      "aluno": 3,
+      "texto": "A solução foi desenvolvida em Java utilizando um loop for e verificação de paridade.",
+      "desafiop": 1
+    }
+  ]
 }
