@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       element: <ListaAlunos/>
     },
   {
-      path: "/Historico",
+      path: "/Historico/:alunoId",
       element: <Historico/>
   }
   

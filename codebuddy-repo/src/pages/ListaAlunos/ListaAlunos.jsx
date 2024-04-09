@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom"; // Adicionando o import do Link
 import Navbar from "../../components/Navbar";
 import NavbarGrupo from "../GrupoDetails/componentsGrupo/NavbarGrupo";
 import ContainerG from "../../components/container/ContainerG";
 import styles from "./ListaAlunos.module.css";
-import { Link } from "react-router-dom";
 
 const ListaAlunos = () => {
   const { grupoNome } = useParams();
@@ -21,7 +20,7 @@ const ListaAlunos = () => {
           const alunosNomes = await Promise.all(grupo.alunoId.map(async alunoId => {
             const responseAluno = await fetch(`http://localhost:3000/users/${alunoId}`);
             const alunoData = await responseAluno.json();
-            return alunoData.nome;
+            return { id: alunoId, nome: alunoData.nome }; // Retorna um objeto com id e nome do aluno
           }));
           setAlunosDoGrupo(alunosNomes || []);
         } else {
@@ -46,13 +45,13 @@ const ListaAlunos = () => {
           {loading ? (
             <p>Carregando...</p>
           ) : alunosDoGrupo.length > 0 ? (
-            alunosDoGrupo.map((alunoNome, index) => (
+            alunosDoGrupo.map((aluno, index) => ( // Alterando para receber aluno ao invés de alunoNome
               <div key={index} className={styles.alunoItem}>
-                <Link to="/Historico">{alunoNome}</Link>
+                <Link to={`/Historico/${aluno.id}`}>{aluno.nome}</Link> {/* Corrigindo o link */}
               </div>
             ))
           ) : (
-            <p>Nenhum aluno encontrado para este grupo.</p>
+            <p></p>
           )}
         </div>
       </ContainerG>

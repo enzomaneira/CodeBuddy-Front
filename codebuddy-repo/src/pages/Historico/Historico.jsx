@@ -6,35 +6,25 @@ import ContainerG from "../../components/container/ContainerG";
 import styles from "./Historico.module.css";
 
 const Historico = () => {
-  const { grupoNome } = useParams();
-  const [alunosDoGrupo, setAlunosDoGrupo] = useState([]);
+  const { alunoId } = useParams();
+  const [aluno, setAluno] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchAlunosDoGrupo = async () => {
+    const fetchAluno = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/grupos?nome=${encodeURIComponent(grupoNome)}`);
-        const data = await response.json();
-        const grupo = data[0];
-        if (grupo) {
-          const alunosNomes = await Promise.all(grupo.alunoId.map(async alunoId => {
-            const responseAluno = await fetch(`http://localhost:3000/users/${alunoId}`);
-            const alunoData = await responseAluno.json();
-            return alunoData.nome;
-          }));
-          setAlunosDoGrupo(alunosNomes || []);
-        } else {
-          console.warn(`Grupo não encontrado com o nome ${grupoNome}`);
-        }
+        const response = await fetch(`http://localhost:3000/users?id=${encodeURIComponent(alunoId)}`);
+        const alunoData = await response.json();
+        setAluno(alunoData[0] || null);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching alunos:', error);
+        console.error('Error fetching aluno:', error);
         setLoading(false);
       }
     };
 
-    fetchAlunosDoGrupo();
-  }, [grupoNome]);
+    fetchAluno();
+  }, [alunoId]);
 
   return (
     <div>
@@ -44,14 +34,21 @@ const Historico = () => {
         <div className={styles.listaAlunos}>
           {loading ? (
             <p>Carregando...</p>
-          ) : alunosDoGrupo.length > 0 ? (
-            alunosDoGrupo.map((alunoNome, index) => (
-              <div key={index} className={styles.alunoItem}>
-                <span>{alunoNome}</span>
+          ) : aluno ? (
+            <div className={styles.alunoItem}>
+              <div>NOME DO ALUNO:</div>
+              <span>{aluno.nome}</span>
+              <div>QUANTIDADE DE GRUPOS PRESENTES:</div>
+              <span>{aluno.qtdgrupos}</span>
+              <div>NOMES DOS GRUPOS:</div>
+              <div>
+                {aluno.grupos.map((grupo, index) => (
+                  <div key={index}>{grupo}</div>
+                ))}
               </div>
-            ))
+            </div>
           ) : (
-            <p>Nenhum aluno encontrado para este grupo.</p>
+            <p>Nenhuma informacao sobre este aluno disponivel.</p>
           )}
         </div>
       </ContainerG>
