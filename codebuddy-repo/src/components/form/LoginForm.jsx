@@ -4,7 +4,7 @@ import styles from './LoginForm.module.css';
 
 const LoginForm = () => {
   const [loginData, setLoginData] = useState({ login: '', senha: '', option: '' });
-  const navigate = useNavigate(); // Substitua useHistory por useNavigate
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;

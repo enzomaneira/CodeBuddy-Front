@@ -20,6 +20,7 @@ import DesafioResolver from './pages/DesafioResolver/DesafioResolver.jsx'
 import CriarDesafio from './pages/CriarDesafio/CriarDesafio.jsx'
 import ListaAlunos from "./pages/ListaAlunos/ListaAlunos.jsx"
 import Historico from "./pages/Historico/Historico.jsx"
+import Resposta from "./pages/Resposta/Resposta.jsx"
 
 
 
@@ -73,10 +74,14 @@ const router = createBrowserRouter([
       element: <ListaAlunos/>
     },
   {
-      path: "/Historico/:alunoId",
-      element: <Historico/>
+    path: "/Historico/:alunoId/:grupoNome",
+    element: <Historico />
+  },
+  {
+      path: "/Historico/:alunoId/:grupoNome/:desafioNome/resposta",
+      element: <Resposta />
   }
-  
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

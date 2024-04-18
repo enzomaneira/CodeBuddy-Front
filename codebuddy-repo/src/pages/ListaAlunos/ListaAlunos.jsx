@@ -6,7 +6,7 @@ import ContainerG from "../../components/container/ContainerG";
 import styles from "./ListaAlunos.module.css";
 
 const ListaAlunos = () => {
-  const { grupoNome } = useParams();
+  const { grupoNome, alunoId } = useParams();
   const [alunosDoGrupo, setAlunosDoGrupo] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -47,7 +47,7 @@ const ListaAlunos = () => {
           ) : alunosDoGrupo.length > 0 ? (
             alunosDoGrupo.map((aluno, index) => ( // Alterando para receber aluno ao invés de alunoNome
               <div key={index} className={styles.alunoItem}>
-                <Link to={`/Historico/${aluno.id}`}>{aluno.nome}</Link> {/* Corrigindo o link */}
+                <Link to={`/Historico/${aluno.id}/${encodeURIComponent(grupoNome)}`} className={styles.groupLink}>{aluno.nome}</Link>
               </div>
             ))
           ) : (
