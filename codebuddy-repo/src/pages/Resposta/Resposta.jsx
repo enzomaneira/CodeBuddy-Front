@@ -1,11 +1,9 @@
-// Resposta.jsx
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import NavbarGrupo from "../GrupoDetails/componentsGrupo/NavbarGrupo";
 import ContainerG from "../../components/container/ContainerG";
-import styles from "./Resposta.module.css"; // Importe o arquivo CSS
+import styles from "./Resposta.module.css";
 
 const Resposta = () => {
   const { alunoId, grupoNome, desafioNome } = useParams();
@@ -18,20 +16,15 @@ const Resposta = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Busca pelo ID do desafio com base no nome do desafio
         const responseDesafio = await fetch(`http://localhost:3000/desafios?nome=${encodeURIComponent(desafioNome)}`);
         const dataDesafio = await responseDesafio.json();
         if (dataDesafio.length > 0) {
           const desafio = dataDesafio[0];
           setDesafioId(desafio.id);
-
-          // Busca pelo aluno
           const responseAluno = await fetch(`http://localhost:3000/alunos?id=${encodeURIComponent(alunoId)}`);
           const dataAluno = await responseAluno.json();
           const aluno = dataAluno[0];
           setStudentName(aluno.nome);
-
-          // Busca pela resposta do aluno para o desafio
           const responseResposta = await fetch(`http://localhost:3000/respostas?aluno=${encodeURIComponent(alunoId)}&desafiop=${encodeURIComponent(desafio.id)}`);
           const dataResposta = await responseResposta.json();
           if (dataResposta.length > 0) {
@@ -49,7 +42,7 @@ const Resposta = () => {
     };
 
     fetchData();
-  }, [alunoId, grupoNome, desafioNome]); // Alterado para incluir desafioNome como dependência
+  }, [alunoId, grupoNome, desafioNome]);
 
   return (
     <div>
