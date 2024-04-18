@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./DesafioResolver.module.css";
-import send from "../../img/sendResolver.png" 
+import send from "../../img/sendResolver.png"
 import back from "../../img/backResolver.png"
 import gpt from "../../img/gpt.png"
 import BotaoResolver from "./componentesResolver/BotaoResolver";
@@ -51,7 +51,7 @@ const DesafioResolver = () => {
 
           if (desafioEncontrado) {
             setDesafio(desafioEncontrado);
-            saveState(desafioEncontrado); // Salva o estado no localStorage
+            saveState(desafioEncontrado);
           } else {
             console.warn(`Desafio não encontrado com o nome ${desafioNome}`);
           }

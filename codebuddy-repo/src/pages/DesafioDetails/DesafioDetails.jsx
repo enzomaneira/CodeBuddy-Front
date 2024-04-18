@@ -2,19 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ContainerG from "../../components/container/ContainerG";
 import Navbar from "../../components/Navbar";
-import styles from "./DesafioDetails.module.css"; 
+import styles from "./DesafioDetails.module.css";
 import NavbarDesafio from "./componentsDesafio/NavbarDesafio";
 import BotaoDesafio from "./componentsDesafio/BotaoDesafio";
 
 const DesafioDetails = () => {
   const { grupoNome, desafioNome } = useParams();
-  const [desafio, setDesafio] = useState({
-    nome: "Nome do Desafio",
-    texto: "Texto do Desafio...",
-  });
-
+  const [desafio, setDesafio] = useState(null);
   const navigateTo = useNavigate();
-
 
   useEffect(() => {
     const fetchDesafio = async () => {
@@ -24,7 +19,7 @@ const DesafioDetails = () => {
         const grupo = dataGrupos[0];
 
         if (grupo) {
-          const responseDesafio = await fetch(`http://localhost:3000/Desafios?grupoId=${encodeURIComponent(grupo.id)}&nome=${encodeURIComponent(desafioNome)}`);
+          const responseDesafio = await fetch(`http://localhost:3000/desafios?grupoId=${grupo.id}&nome=${encodeURIComponent(desafioNome)}`);
           const dataDesafio = await responseDesafio.json();
           const desafioEncontrado = dataDesafio[0];
 

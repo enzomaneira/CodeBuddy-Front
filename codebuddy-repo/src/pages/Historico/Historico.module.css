@@ -1,29 +1,28 @@
-.post {
-    display: block;
-    padding-top: 10%;
-    background-color: grey;
+.listaAlunos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  text-align: center;
+  padding-bottom: 80%;
 }
 
-.bottomImagesContainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-  }
 
-  .bottomImage {
-    width: 30px;
-    height: auto;
-    margin: 25px; /* Ajuste conforme necessário */
-  }
+.alunoItem {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
 
-  .inverted {
-    transform: scaleX(-1);
-  }
+.alunoItem > div {
+  margin-bottom: 20px;
+}
 
- /* Adicione ao seu arquivo GrupoDetails.module.css */
+
+
 .botaoCriarPostIntegrated {
   width: 51px;
   height: 42px;
@@ -39,6 +38,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000; /* Adição da cor ao estilo */
+  color: #000;
   z-index: 1;
+}
+
+.alunoItem .infoItem {
+  display: flex;
+}
+
+.alunoItem .infoItem span {
+  margin-bottom: 10px; /* Espaçamento entre cada linha (título e resposta) */
+}
+
+.alunoItem .infoItem .title {
+  font-weight: bold;
+}
+
+.alunoItem .infoItem .text {
+  margin-left: 20px;
 }

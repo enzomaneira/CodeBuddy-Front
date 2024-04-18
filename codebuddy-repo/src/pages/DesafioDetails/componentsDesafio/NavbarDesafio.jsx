@@ -4,7 +4,7 @@ import styles from "./Navbardesafio.module.css";
 import backarrow from "../../../img/backarrow.png";
 
 const NavbarDesafio = () => {
-  const { grupoNome, desafioNome } = useParams();
+  const { nome, grupoNome, desafioNome } = useParams();
 
   return (
     <div className={styles.navbarDesafio}>
@@ -13,6 +13,7 @@ const NavbarDesafio = () => {
         <Link to={`/Desafios/${encodeURIComponent(grupoNome)}`}>
           <img src={backarrow} alt="Back Arrow" />
         </Link>
+
       </div>
     </div>
   );

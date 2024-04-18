@@ -36,15 +36,13 @@ const Historico = () => {
             <p>Carregando...</p>
           ) : aluno ? (
             <div className={styles.alunoItem}>
-              <div>NOME DO ALUNO:</div>
-              <span>{aluno.nome}</span>
-              <div>QUANTIDADE DE GRUPOS PRESENTES:</div>
-              <span>{aluno.qtdgrupos}</span>
-              <div>NOMES DOS GRUPOS:</div>
-              <div>
-                {aluno.grupos.map((grupo, index) => (
-                  <div key={index}>{grupo}</div>
-                ))}
+              <div className={styles.infoItem}>
+                <span className={styles.title}>NOME:</span>
+                <span className={styles.text}>{aluno.nome}</span>
+              </div>
+              <div className={styles.infoItem}>
+                <span className={styles.title}>GRUPO:</span>
+                <span className={styles.text}>{aluno.qtdgrupos}</span>
               </div>
             </div>
           ) : (

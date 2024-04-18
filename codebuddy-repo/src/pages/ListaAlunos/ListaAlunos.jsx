@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom"; // Adicionando o import do Link
+import { useParams, Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import NavbarGrupo from "../GrupoDetails/componentsGrupo/NavbarGrupo";
 import ContainerG from "../../components/container/ContainerG";
@@ -20,7 +20,7 @@ const ListaAlunos = () => {
           const alunosNomes = await Promise.all(grupo.alunoId.map(async alunoId => {
             const responseAluno = await fetch(`http://localhost:3000/alunos/${alunoId}`);
             const alunoData = await responseAluno.json();
-            return { id: alunoId, nome: alunoData.nome }; // Retorna um objeto com id e nome do aluno
+            return { id: alunoId, nome: alunoData.nome };
           }));
           setAlunosDoGrupo(alunosNomes || []);
         } else {
