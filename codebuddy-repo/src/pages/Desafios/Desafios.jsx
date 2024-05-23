@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import ContainerG from "../../components/container/ContainerG";
 import Navbar from "../../components/Navbar";
 import styles from "./Desafios.module.css";
@@ -8,6 +8,7 @@ import BotaoCriarPost from "../GrupoDetails/componentsGrupo/BotaoCriarPost";
 
 const Desafios = () => {
   const { grupoNome } = useParams();
+  const navigate = useNavigate();
   const [desafios, setDesafios] = useState([]);
 
   useEffect(() => {
@@ -37,7 +38,7 @@ const Desafios = () => {
       <ContainerG style={{ backgroundColor: "orange" }}>
         <div className={styles.title}>
           Desafios - Grupo {grupoNome}
-          <Link to="/profile" className={`${styles.img} img`}>
+          <Link onClick={() => navigate(-1)} className={`${styles.img} img`}>
             <img src={backarrow} alt="Back Arrow" />
           </Link>
         </div>
@@ -51,7 +52,7 @@ const Desafios = () => {
           ))}
         </div>
         <Link to={`/Desafios/${encodeURIComponent(grupoNome)}/CriarDesafio`}>
-        <BotaoCriarPost/>
+          <BotaoCriarPost />
         </Link>
       </ContainerG>
     </div>

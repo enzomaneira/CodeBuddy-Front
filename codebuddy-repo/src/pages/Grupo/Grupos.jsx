@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
-import ContainerP from "../../components/container/ContainerP";
 import styles from "./Grupos.module.css";
 import TextContainer from "../../components/container/TextContainer";
 import { Link } from "react-router-dom";
@@ -25,7 +24,7 @@ const Grupos = () => {
         <div className={styles.groupsGrid}>
           {aluno.grupos.map((grupo, index) => (
             <div key={index} className={styles.groupContainer}>
-              <Link key={index} to={`/Grupo/${encodeURIComponent(grupo)}`} className={styles.groupLink}>
+              <Link key={index} to={`/Grupo/${encodeURIComponent(grupo)}`}>
                 <TextContainer texto={`${grupo}`} />
               </Link>
             </div>

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import NavbarGrupo from "../GrupoDetails/componentsGrupo/NavbarGrupo";
+import NavbarGrupo from "./components/NavbarLista";
 import ContainerG from "../../components/container/ContainerG";
 import styles from "./ListaAlunos.module.css";
+import { Link } from "react-router-dom";
 
 const ListaAlunos = () => {
-  const { grupoNome, alunoId } = useParams();
+  const { grupoNome } = useParams();
   const [alunosDoGrupo, setAlunosDoGrupo] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -40,12 +41,12 @@ const ListaAlunos = () => {
     <div>
       <Navbar />
       <ContainerG style={{ backgroundColor: "#4565B7" }}>
-        <NavbarGrupo />
+        <NavbarGrupo grupoNome={grupoNome} />
         <div className={styles.listaAlunos}>
           {loading ? (
             <p>Carregando...</p>
           ) : alunosDoGrupo.length > 0 ? (
-            alunosDoGrupo.map((aluno, index) => ( // Alterando para receber aluno ao invés de alunoNome
+            alunosDoGrupo.map((aluno, index) => (
               <div key={index} className={styles.alunoItem}>
                 <Link to={`/Historico/${aluno.id}/${encodeURIComponent(grupoNome)}`} className={styles.groupLink}>{aluno.nome}</Link>
               </div>

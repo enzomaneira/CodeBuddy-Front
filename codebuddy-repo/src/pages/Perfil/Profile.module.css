@@ -5,13 +5,13 @@
 }
 
 .page {
-  align-items: center; /* Centraliza verticalmente */
-  margin-left: -60%; /* Adicione margem à esquerda */
+  align-items: center; 
+  margin-left: -60%; 
   margin-top: 10%;
 }
 
 .textContainer {
-  margin-top: -100px;
+  margin-top: -30%;
 }
 
 .botaoGrupo {
@@ -34,5 +34,3 @@ font-family: Inter;
 .texto {
   padding-left: 10px;
 }
-
-
